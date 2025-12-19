@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reclutamiento - TODO Academy</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="login-page" id="loginPage">
+        <div class="login-container">
+            <h1 class="login-title">Iniciar Sesión</h1>
+            <form id="loginForm" action="login_proceso.php" method="POST">
+                <div class="form-group">
+                    <input type="email" name="email_login" class="form-input" placeholder="tu@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password_login" class="form-input" placeholder="••••••••" required>
+                </div>
+                <a href="#" class="forgot-password">¿Se olvidó su contraseña?</a>
+                <button type="submit" class="login-btn">Iniciar Sesión</button>
+                <div class="divider"><span>o</span></div>
+                <button type="button" class="register-btn" id="showRegisterBtn">Crear Cuenta</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal" style="display: none;">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+            <h2 class="modal-title">Crear Cuenta de Candidato</h2>
+            
+            <form id="registerForm" action="registro_proceso.php" method="POST" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Nombre *</label>
+                        <input type="text" name="nombre" class="form-input" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Correo Electrónico *</label>
+                        <input type="email" name="email" class="form-input" placeholder="tu@correo.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Contraseña *</label>
+                        <input type="password" name="password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Confirmar Contraseña *</label>
+                        <input type="password" name="confirm_password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Teléfono</label>
+                    <input type="tel" name="telefono" class="form-input" placeholder="+52 123 456 7890">
+                </div>
+
+                <div class="skills-section">
+                    <div class="form-group">
+                        <label class="form-label">Habilidades Técnicas</label>
+                        <textarea name="habilidades_tecnicas" class="form-input" placeholder="Ej: JavaScript, React, Node.js, Python, SQL..."></textarea>
+                        <div class="skills-hint">Separa cada habilidad con comas</div>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <div class="form-group">
+                        <label class="form-label">Habilidades Blandas</label>
+                        <textarea name="habilidades_blandas" class="form-input" placeholder="Ej: Trabajo en equipo, comunicación, liderazgo, resolución de problemas..."></textarea>
+                        <div class="skills-hint">Separa cada habilidad con comas</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Curriculum Vitae (CV) *</label>
+                    <div class="file-upload" id="cvUpload">
+                        <input type="file" name="cv_file" id="cvFile" accept=".pdf,.doc,.docx" required>
+                        <div class="file-name" id="cvFileName"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Portafolio (Opcional)</label>
+                    <div class="file-upload" id="portfolioUpload">
+                        <input type="file" name="portfolio_file" id="portfolioFile" accept=".pdf,.zip,.rar,.7z">
+                        <div class="file-name" id="portfolioFileName"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Enlace a Portafolio Online (Opcional)</label>
+                    <input type="url" name="portfolio_url" class="form-input" placeholder="https://tuportafolio.com">
+                </div>
+
+                <button type="submit" class="login-btn">Crear Cuenta</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Elementos del DOM
+        const loginPage = document.getElementById('loginPage');
+        const dashboardPage = document.getElementById('dashboardPage');
+        const registerModal = document.getElementById('registerModal');
+        const showRegisterBtn = document.getElementById('showRegisterBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const cvUpload = document.getElementById('cvUpload');
+        const cvFile = document.getElementById('cvFile');
+        const cvFileName = document.getElementById('cvFileName');
+        const portfolioUpload = document.getElementById('portfolioUpload');
+        const portfolioFile = document.getElementById('portfolioFile');
+        const portfolioFileName = document.getElementById('portfolioFileName');
+
+        // Mostrar modal de registro
+        showRegisterBtn.addEventListener('click', () => {
+            registerModal.style.display = 'flex';
+        });
+
+        // Cerrar modal de registro
+        closeModalBtn.addEventListener('click', () => {
+            registerModal.style.display = 'none';
+        });
+
+        // Cerrar modal al hacer clic fuera
+        registerModal.addEventListener('click', (e) => {
+            if (e.target === registerModal) {
+                registerModal.style.display = 'none';
+            }
+        });
+
+        // Manejar subida de CV
+        cvUpload.addEventListener('click', () => {
+            cvFile.click();
+        });
+
+        cvFile.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                cvFileName.textContent = e.target.files[0].name;
+            }
+        });
+
+        // Manejar subida de portafolio
+        portfolioUpload.addEventListener('click', () => {
+            portfolioFile.click();
+        });
+
+        portfolioFile.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                portfolioFileName.textContent = e.target.files[0].name;
+            }
+        });
+
+        /*
+        **********************************************************
+        * ¡IMPORTANTE! Se modificó la lógica de JavaScript:       *
+        * Ahora, los formularios se envían a los archivos PHP.    *
+        * La validación de contraseñas y CV se hará en PHP,       *
+        * aunque la validación de coincidencia de contraseñas     *
+        * sigue siendo útil aquí como primera capa de validación. *
+        **********************************************************
+        */
+
+        // Procesar login - ELIMINAMOS LA SIMULACIÓN DE JS
+        loginForm.addEventListener('submit', (e) => {
+            // El formulario ahora se envía a login_proceso.php, 
+            // no necesitamos e.preventDefault() aquí a menos que quieras AJAX.
+            // Lo mantendremos sin e.preventDefault() para el flujo PHP normal.
+            // Si el login falla, PHP redirige o muestra un error.
+        });
+
+        // Procesar registro - AGREGAMOS LA VALIDACIÓN DE COINCIDENCIA DE CONTRASEÑAS Y SEGUIMOS CON EL ENVÍO A PHP
+        registerForm.addEventListener('submit', (e) => {
+            // Validar que las contraseñas coincidan antes de enviar a PHP
+            const password = registerForm.querySelector('input[name="password"]').value;
+            const confirmPassword = registerForm.querySelector('input[name="confirm_password"]').value;
+            
+            if (password !== confirmPassword) {
+                e.preventDefault(); // Detener el envío si no coinciden
+                alert('Las contraseñas no coinciden');
+                return;
+            }
+
+            // La validación de CV se deja en el required del input, y PHP la gestionará.
+            // El formulario se envía a registro_proceso.php
+        });
+
+        // Cerrar sesión
+        if(logoutBtn) {
+            logoutBtn.addEventListener('click', () => {
+                // Para cerrar sesión de forma real, deberías redirigir a un script PHP de logout.
+                // window.location.href = 'logout.php'; 
+            });
+        }
+    </script>
+</body>
+</html>

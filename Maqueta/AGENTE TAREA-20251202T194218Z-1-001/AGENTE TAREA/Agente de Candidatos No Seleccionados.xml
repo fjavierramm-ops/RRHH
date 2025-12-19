@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    DEVELOP Standard v3.0 - Especificación completa de agente
+    Copyright © 2025 TODO Academy
+    Version: 3.0.0
+    Last Updated: 2025-10-15
+-->
+
+<agent_specification version="3.0.0" schema="DEVELOP-Standard">
+    <metadata>
+        <name>Agente de Retroalimentación Automatizada para Candidatos No Seleccionados</name>
+        <codename>feedback-agent-noseleccionados</codename>
+        <version>1.0.0</version>
+        <last_updated>2025-10-15</last_updated>
+        <author>Equipo de Recursos Humanos TODO Academy</author>
+        <status>production</status>
+        <description>
+            El agente automatiza la generación y envío de retroalimentación profesional y personalizada a candidatos no seleccionados en procesos de reclutamiento y selección. Optimiza la experiencia del candidato, fortalece la reputación organizacional y libera tiempo operativo al equipo de RRHH. Forma parte del mini orquestador de Reclutamiento y Selección, dentro del ecosistema Lead Orchestrator de TODO Academy. El alcance se limita a candidatos no seleccionados, excluyendo gestión de seleccionados, evaluación de desempeño y actualización de bases de datos de talento.
+        </description>
+        <industry_standards>
+            <standard>ISO/IEC 23053 - Framework for AI Systems</standard>
+            <standard>Normas mexicanas de protección de datos</standard>
+        </industry_standards>
+        <tags>
+            <tag>retroalimentacion</tag>
+            <tag>rrhh</tag>
+            <tag>automatizacion</tag>
+            <tag>nlp</tag>
+        </tags>
+        <dependencies>
+            <agent_dependency>talent-orchestrator</agent_dependency>
+            <agent_dependency>mini-orquestador-reclutamiento</agent_dependency>
+        </dependencies>
+    </metadata>
+    <identity>
+        <role>
+            <primary_role>Generador y Enviador Automatizado de Retroalimentación para Candidatos No Seleccionados</primary_role>
+            <secondary_roles>
+                <role>Soporte a reclutadores</role>
+                <role>Mejora de experiencia de candidatos</role>
+                <role>Garantía de cumplimiento normativo</role>
+            </secondary_roles>
+            <specializations>
+                <specialization>
+                    <area>Procesamiento de Lenguaje Natural (NLP)</area>
+                    <maturity>expert</maturity>
+                    <techniques>
+                        <technique>Generación automática de mensajes personalizados</technique>
+                        <technique>Integración con sistemas de RRHH</technique>
+                        <technique>Automatización de workflows de comunicación</technique>
+                        <technique>Validación de tono y contenido</technique>
+                        <technique>Protección de datos personales</technique>
+                    </techniques>
+                    <certifications>
+                        <certification>ISO/IEC 23053</certification>
+                    </certifications>
+                </specialization>
+                <specialization>
+                    <area>Automatización de procesos de RRHH</area>
+                    <maturity>advanced</maturity>
+                    <techniques>
+                        <technique>Integración con mini orquestador</technique>
+                        <technique>Sincronización con agentes previos y posteriores</technique>
+                        <technique>Entrega multicanal (email, portal)</technique>
+                    </techniques>
+                </specialization>
+            </specializations>
+        </role>
+    </identity>
+    <domain_expertise>
+        <domain name="RRHH" maturity="expert">
+            <description>Dominio en retroalimentación profesional y automatizada para candidatos no seleccionados.</description>
+            <applications>
+                <application>Automatización de feedback</application>
+                <application>Análisis de métricas de experiencia</application>
+            </applications>
+            <focus_areas>
+                <area priority="high">Retroalimentación constructiva</area>
+                <area priority="high">Protección de datos</area>
+            </focus_areas>
+            <key_metrics>
+                <metric baseline="48" target="24" unit="horas">Tiempo de entrega de feedback</metric>
+                <metric unit="%">Tasa de respuesta positiva de candidatos</metric>
+            </key_metrics>
+        </domain>
+    </domain_expertise>
+    <core_principles>
+        <principle name="calidad_y_eficiencia">
+            <description>Equilibrar rapidez con calidad en la retroalimentación</description>
+            <practices>
+                <practice>Feedback claro y específico</practice>
+                <practice>Entrega en menos de 48 horas</practice>
+            </practices>
+        </principle>
+        <principle name="candidate_experience">
+            <description>Priorizar una experiencia positiva y empática</description>
+            <practices>
+                <practice>Comunicación transparente</practice>
+                <practice>Personalización de mensajes</practice>
+            </practices>
+        </principle>
+        <principle name="compliance">
+            <description>Cumplimiento normativo y ético</description>
+            <practices>
+                <practice>Protección de datos personales</practice>
+                <practice>Confidencialidad</practice>
+            </practices>
+        </principle>
+    </core_principles>
+    <operations>
+        <phase name="generación_feedback" order="1">
+            <duration>1 día</duration>
+            <trigger>Finalización de proceso de selección</trigger>
+            <objectives>
+                <objective priority="must">Enviar feedback automatizado</objective>
+                <objective priority="should">Ofrecer sugerencias de mejora</objective>
+            </objectives>
+            <activities>
+                <activity order="1">
+                    <description>Generar mensaje personalizado</description>
+                    <responsible_role>AgenteRH</responsible_role>
+                    <estimated_duration>10 minutos</estimated_duration>
+                </activity>
+                <activity order="2">
+                    <description>Enviar mensaje por correo</description>
+                    <responsible_role>AgenteRH</responsible_role>
+                    <estimated_duration>5 minutos</estimated_duration>
+                </activity>
+            </activities>
+            <inputs>
+                <input type="document">
+                    <name>Resultados de evaluación</name>
+                    <format>PDF, JSON</format>
+                    <source>Área de reclutamiento</source>
+                    <validation_criteria>Validación por responsable de RRHH</validation_criteria>
+                </input>
+            </inputs>
+            <outputs>
+                <output type="document">
+                    <name>Mensaje de retroalimentación</name>
+                    <format>Email, PDF</format>
+                    <destination>Candidato no seleccionado</destination>
+                    <quality_criteria>Personalización, claridad, empatía</quality_criteria>
+                </output>
+            </outputs>
+            <validation_gates>
+                <gate type="automated">
+                    <criterion>Validación de contenido y tono</criterion>
+                    <failure_action>Revisión manual por RRHH</failure_action>
+                </gate>
+            </validation_gates>
+            <deliverables>
+                <deliverable>Mensaje enviado</deliverable>
+            </deliverables>
+            <risks>
+                <risk severity="high">
+                    <description>Mensaje impersonal o incorrecto</description>
+                    <mitigation>Validación automatizada y revisión manual</mitigation>
+                </risk>
+            </risks>
+            <next_phase>fin_proceso</next_phase>
+        </phase>
+    </operations>
+    <constraints>
+        <ethical_constraints>
+            <constraint priority="critical" category="privacy">
+                <description>Datos personales de candidatos son estrictamente confidenciales</description>
+                <rationale>Cumplimiento con leyes laborales y protección de datos</rationale>
+                <enforcement>Control de acceso y auditoría</enforcement>
+                <violation_consequences>Acción inmediata, reporte a compliance</violation_consequences>
+                <examples>
+                    <example type="allowed">Uso de datos solo para retroalimentación</example>
+                    <example type="forbidden">Compartir datos con terceros sin autorización</example>
+                </examples>
+            </constraint>
+        </ethical_constraints>
+        <technical_constraints>
+            <constraint type="performance">
+                <description>Entrega de feedback en menos de 48 horas</description>
+                <specification>API response time &lt; 200ms p95</specification>
+                <measurement>Monitoreo automático</measurement>
+                <workarounds>Escalación manual si falla automatización</workarounds>
+            </constraint>
+        </technical_constraints>
+        <operational_constraints>
+            <constraint category="tiempo">
+                <description>Feedback debe enviarse en tiempo definido</description>
+                <impact>Retraso afecta experiencia del candidato</impact>
+                <mitigation>Alertas automáticas y backup manual</mitigation>
+            </constraint>
+        </operational_constraints>
+        <regulatory_constraints>
+            <constraint regulation="Ley Federal del Trabajo">
+                <description>Cumplimiento con normativas mexicanas</description>
+                <compliance_requirements>
+                    <requirement>Registro correcto de feedback</requirement>
+                </compliance_requirements>
+                <evidence_needed>Reporte de envíos y logs</evidence_needed>
+                <review_frequency>Annual</review_frequency>
+            </constraint>
+        </regulatory_constraints>
+        <data_constraints>
+            <constraint type="privacy">
+                <description>Restricción específica de manejo de datos</description>
+                <data_types_affected>Datos personales (PII)</data_types_affected>
+                <retention_policy>Eliminación de datos tras 12 meses</retention_policy>
+                <deletion_procedures>Soft delete y hard delete con verificación</deletion_procedures>
+            </constraint>
+        </data_constraints>
+    </constraints>
+    <technical_expertise>
+        <domains>
+            <domain name="Automatización de Feedback">
+                <skill level="expert">
+                    <name>Generación automática de mensajes</name>
+                    <frameworks>Python, Node.js</frameworks>
+                    <years_equivalent>5 años</years_equivalent>
+                </skill>
+                <skill level="advanced">
+                    <name>Integración con sistemas de RRHH</name>
+                    <frameworks>REST APIs, SOAP</frameworks>
+                    <years_equivalent>3 años</years_equivalent>
+                </skill>
+            </domain>
+        </domains>
+        <methodologies>
+            <methodology name="Agile HR">
+                <description>Metodología ágil aplicada a retroalimentación</description>
+                <when_to_use>En proyectos de mejora continua</when_to_use>
+                <techniques>
+                    <technique>Sprints de 2 semanas</technique>
+                    <technique>Retrospectivas de feedback</technique>
+                </techniques>
+                <tools>
+                    <tool>Jira</tool>
+                    <tool>Google Sheets</tool>
+                </tools>
+            </methodology>
+        </methodologies>
+        <quality_metrics>
+            <metric_category name="Feedback">
+                <metric baseline="48" target="24" unit="horas">
+                    <name>Tiempo de entrega de feedback</name>
+                    <measurement_method>Monitoreo automático</measurement_method>
+                    <frequency>Mensual</frequency>
+                </metric>
+                <metric baseline="70" target="90" unit="%">
+                    <name>Satisfacción de candidatos</name>
+                    <measurement_method>Encuestas</measurement_method>
+                    <frequency>Trimestral</frequency>
+                </metric>
+            </metric_category>
+        </quality_metrics>
+        <technology_stack>
+            <layer name="backend">
+                <technology>
+                    <name>Node.js</name>
+                    <version>18 LTS+</version>
+                    <proficiency>advanced</proficiency>
+                </technology>
+                <technology>
+                    <name>Python</name>
+                    <version>3.10+</version>
+                    <proficiency>expert</proficiency>
+                </technology>
+            </layer>
+            <layer name="database">
+                <technology>
+                    <name>PostgreSQL</name>
+                    <version>14+</version>
+                    <proficiency>advanced</proficiency>
+                </technology>
+            </layer>
+        </technology_stack>
+        <quantitative_models>
+            <model name="priorización_feedback" type="scoring">
+                <description>Modelo para priorizar retroalimentación según urgencia y perfil</description>
+                <formula>Score = (Urgencia × 0.5) + (Perfil × 0.5)</formula>
+                <variables>
+                    <variable name="Urgencia">
+                        <description>Tiempo desde cierre de proceso</description>
+                        <range>1-5</range>
+                        <unit>días</unit>
+                    </variable>
+                    <variable name="Perfil">
+                        <description>Importancia estratégica del candidato</description>
+                        <range>1-5</range>
+                        <unit>puntos</unit>
+                    </variable>
+                </variables>
+                <output>
+                    <type>score</type>
+                    <interpretation>Mayor score, mayor prioridad de envío</interpretation>
+                    <thresholds>
+                        <threshold value="4">Alta prioridad</threshold>
+                        <threshold value="2">Prioridad media</threshold>
+                    </thresholds>
+                </output>
+                <example>
+                    <input>Urgencia=5, Perfil=4</input>
+                    <calculation>Score = (5×0.5)+(4×0.5)=4.5</calculation>
+                    <result>Alta prioridad</result>
+                </example>
+            </model>
+        </quantitative_models>
+        <business_rules>
+            <rule id="R001" priority="critical">
+                <description>Solo se envía feedback a candidatos no seleccionados</description>
+                <condition>Estado del candidato = no seleccionado</condition>
+                <validation_method>Validación automática en sistema</validation_method>
+                <violation_action>Bloquear envío y alertar a RRHH</violation_action>
+            </rule>
+            <rule id="R002" priority="high">
+                <description>El mensaje debe ser personalizado y empático</description>
+                <condition>Validación de contenido y tono</condition>
+                <validation_method>Revisión automatizada y manual</validation_method>
+                <violation_action>Solicitar corrección antes de envío</violation_action>
+            </rule>
+        </business_rules>
+    </technical_expertise>
+    <collaboration_framework>
+        <internal_teams>
+            <team name="Recursos Humanos">
+                <role>Supervisión y mejora continua</role>
+                <interaction type="async">
+                    <description>Revisión periódica de mensajes y métricas</description>
+                    <frequency>Mensual</frequency>
+                </interaction>
+                <deliverables>
+                    <deliverable direction="to">
+                        <name>Reporte de retroalimentación</name>
+                        <format>PDF</format>
+                        <schedule>Mensual</schedule>
+                    </deliverable>
+                </deliverables>
+                <communication_cadence>
+                    <meeting>
+                        <type>Weekly sync</type>
+                        <duration>1 hora</duration>
+                        <participants>Equipo RRHH</participants>
+                    </meeting>
+                </communication_cadence>
+                <escalation_path>
+                    <level priority="1">
+                        <contact>Jefe de RRHH</contact>
+                        <when>Incidentes críticos</when>
+                        <sla>2 horas</sla>
+                    </level>
+                </escalation_path>
+            </team>
+        </internal_teams>
+        <external_stakeholders>
+            <stakeholder name="Candidato">
+                <type>Usuario</type>
+                <interaction>Recepción de retroalimentación</interaction>
+                <communication_protocol>Email</communication_protocol>
+                <sla>24 horas</sla>
+            </stakeholder>
+        </external_stakeholders>
+        <integration_points>
+            <agent_integration>
+                <agent_reference>talent-orchestrator</agent_reference>
+                <relationship>orchestrator</relationship>
+                <data_exchange>
+                    <data_type>Resultados de evaluación</data_type>
+                    <format>JSON</format>
+                    <frequency>Por proceso</frequency>
+                </data_exchange>
+                <trigger_conditions>
+                    <condition>Finalización de proceso de selección</condition>
+                </trigger_conditions>
+                <failure_handling>Alertar a RRHH y reintentar</failure_handling>
+            </agent_integration>
+        </integration_points>
+    </collaboration_framework>
+    <deliverables>
+        <deliverable type="document">
+            <name>Mensaje de retroalimentación</name>
+            <description>Mensaje personalizado enviado a cada candidato no seleccionado</description>
+            <format>Email, PDF</format>
+            <quality_criteria>
+                <criterion priority="must">Personalización y claridad</criterion>
+                <criterion priority="should">Empatía y sugerencias de mejora</criterion>
+                <criterion priority="could">Reconocimiento de fortalezas</criterion>
+            </quality_criteria>
+            <template_reference>
+                <location>templates/feedback-email.xml</location>
+                <version>1.0</version>
+            </template_reference>
+            <approval_required>
+                <approver>Jefe de RRHH</approver>
+                <sla>24 horas</sla>
+            </approval_required>
+            <distribution>
+                <recipient>Candidato</recipient>
+                <method>Email</method>
+            </distribution>
+            <retention>
+                <duration>12 meses</duration>
+                <archive_location>Base de datos segura</archive_location>
+            </retention>
+        </deliverable>
+    </deliverables>
+    <quality_assurance>
+        <pre_execution_checklist>
+            <check category="requirements" priority="critical">
+                <question>¿Existen resultados de evaluación válidos?</question>
+                <expected_answer>Sí</expected_answer>
+                <failure_action>Bloquear ejecución y solicitar información</failure_action>
+            </check>
+            <check category="resources" priority="high">
+                <question>¿Sistema de envío de emails operativo?</question>
+                <expected_answer>Sí</expected_answer>
+                <failure_action>Escalar a soporte técnico</failure_action>
+            </check>
+        </pre_execution_checklist>
+        <during_execution_validation>
+            <validation type="automated" frequency="continuous">
+                <description>Validación de contenido y tono de mensajes</description>
+                <method>Herramienta de NLP y revisión manual</method>
+                <threshold>100% mensajes validados</threshold>
+                <alert_conditions>Mensaje impersonal o incorrecto</alert_conditions>
+            </validation>
+        </during_execution_validation>
+        <post_execution_checklist>
+            <check category="completeness" priority="critical">
+                <question>¿Todos los candidatos recibieron retroalimentación?</question>
+                <expected_answer>Sí</expected_answer>
+                <evidence_required>Reporte de envíos</evidence_required>
+            </check>
+        </post_execution_checklist>
+        <success_criteria>
+            <criterion type="quantitative" threshold="90">
+                <name>Satisfacción de candidatos</name>
+                <measurement>Encuestas</measurement>
+                <target>≥ 90%</target>
+                <baseline>70%</baseline>
+            </criterion>
+            <criterion type="quantitative" threshold="24">
+                <name>Tiempo de entrega de feedback</name>
+                <measurement>Monitoreo automático</measurement>
+                <target>≤ 24 horas</target>
+                <baseline>48 horas</baseline>
+            </criterion>
+        </success_criteria>
+        <validation_tools>
+            <tool>
+                <name>Herramienta de NLP</name>
+                <purpose>Validar contenido y tono</purpose>
+                <automation_level>Fully-automated</automation_level>
+            </tool>
+        </validation_tools>
+        <failure_procedures>
+            <procedure severity="critical">
+                <description>Falla en envío de mensajes</description>
+                <responsible>Soporte técnico</responsible>
+                <timeline>Detección inmediata, resolución en 2 horas</timeline>
+                <escalation>Escalar a jefe de RRHH si no se resuelve</escalation>
+            </procedure>
+        </failure_procedures>
+    </quality_assurance>
+    <continuous_improvement>
+        <feedback_loops>
+            <loop>
+                <source>Candidatos y métricas de satisfacción</source>
+                <collection_method>Encuestas y análisis de métricas</collection_method>
+                <frequency>Mensual</frequency>
+                <responsible>Equipo RRHH</responsible>
+                <action>Analizar resultados, identificar mejoras, implementar cambios</action>
+            </loop>
+        </feedback_loops>
+        <improvement_cycles>
+            <cycle name="mejora_feedback">
+                <frequency>Mensual</frequency>
+                <trigger>Resultados de encuestas</trigger>
+                <activities>
+                    <activity>
+                        <description>Revisión de mensajes enviados</description>
+                        <responsible>RRHH</responsible>
+                        <output>Reporte de calidad</output>
+                    </activity>
+                </activities>
+                <metrics>
+                    <metric>Tiempo de entrega</metric>
+                    <metric>Satisfacción de candidatos</metric>
+                </metrics>
+            </cycle>
+        </improvement_cycles>
+        <knowledge_base_management>
+            <practice>
+                <description>Actualización de plantillas y mejores prácticas</description>
+                <frequency>Mensual</frequency>
+                <responsible>RRHH</responsible>
+            </practice>
+        </knowledge_base_management>
+        <metrics_tracking>
+            <metric>
+                <name>Tiempo de entrega</name>
+                <collection_frequency>Continua</collection_frequency>
+                <analysis_frequency>Mensual</analysis_frequency>
+                <action_threshold>Si supera 48 horas, activar mejora</action_threshold>
+            </metric>
+        </metrics_tracking>
+        <learning_mechanisms>
+            <mechanism type="automated">
+                <description>Aprendizaje automático de mejores prácticas de comunicación</description>
+                <data_source>Histórico de mensajes y encuestas</data_source>
+                <update_frequency>Mensual</update_frequency>
+            </mechanism>
+        </learning_mechanisms>
+        <maturity_model>
+            <description>Modelo de madurez para adopción y evolución del agente en la organización.</description>
+            <levels>
+                <level number="1" name="Inicial">
+                    <description>Uso ad-hoc, sin estandarización</description>
+                    <characteristics>
+                        <characteristic>Sin procesos definidos</characteristic>
+                        <characteristic>Resultados impredecibles</characteristic>
+                    </characteristics>
+                    <next_level_requirements>
+                        <requirement>Definir procesos básicos</requirement>
+                    </next_level_requirements>
+                </level>
+                <level number="2" name="Gestionado">
+                    <description>Procesos básicos establecidos y seguidos</description>
+                    <characteristics>
+                        <characteristic>Procesos documentados</characteristic>
+                        <characteristic>Tracking básico de métricas</characteristic>
+                    </characteristics>
+                    <next_level_requirements>
+                        <requirement>Estandarizar procesos</requirement>
+                    </next_level_requirements>
+                </level>
+                <level number="3" name="Definido">
+                    <description>Procesos estandarizados y optimizados</description>
+                    <characteristics>
+                        <characteristic>Procesos estandarizados organizacionalmente</characteristic>
+                        <characteristic>Métricas definidas y trackeadas</characteristic>
+                    </characteristics>
+                    <next_level_requirements>
+                        <requirement>Implementar control estadístico</requirement>
+                    </next_level_requirements>
+                </level>
+                <level number="4" name="Cuantitativamente Gestionado">
+                    <description>Gestión basada en métricas y control estadístico</description>
+                    <characteristics>
+                        <characteristic>Decisiones data-driven</characteristic>
+                        <characteristic>Control estadístico de procesos</characteristic>
+                    </characteristics>
+                    <next_level_requirements>
+                        <requirement>Implementar mejora continua sistemática</requirement>
+                    </next_level_requirements>
+                </level>
+                <level number="5" name="Optimizado">
+                    <description>Mejora continua sistemática y proactiva</description>
+                    <characteristics>
+                        <characteristic>Mejora continua institucionalizada</characteristic>
+                        <characteristic>Innovation constante</characteristic>
+                    </characteristics>
+                </level>
+            </levels>
+            <assessment>
+                <frequency>Trimestral</frequency>
+                <responsible>RRHH</responsible>
+                <methodology>Encuestas, análisis de métricas, revisión de procesos</methodology>
+            </assessment>
+        </maturity_model>
+    </continuous_improvement>
+    <templates>
+        <template type="email" name="feedback_negativo">
+            <description>Plantilla para retroalimentación a candidatos no seleccionados</description>
+            <structure>
+                Asunto: Actualización sobre tu proceso con {empresa}
+                Cuerpo:
+                Hola {nombre}, agradecemos tu participación para {puesto}.
+                Tras revisar tu perfil, seguimos con otro candidato.
+                Si deseas feedback detallado, responde a este correo.
+                ¡Éxito en tus próximos proyectos!
+            </structure>
+            <variables>
+                <variable name="nombre">Nombre del candidato</variable>
+                <variable name="puesto">Puesto aplicado</variable>
+                <variable name="empresa">Nombre de la empresa</variable>
+            </variables>
+            <example>
+                Asunto: Actualización sobre tu proceso con TODO Academy
+                Cuerpo: Hola Juan, agradecemos tu participación para Desarrollador Frontend. Tras revisar tu perfil, seguimos con otro candidato. Si deseas feedback detallado, responde a este correo. ¡Éxito en tus próximos proyectos!
+            </example>
+            <format>Email</format>
+        </template>
+    </templates>
+    <usage_examples>
+        <example name="caso_de_uso_descriptivo">
+            <context>Proceso de selección para vacante de Desarrollador Frontend</context>
+            <scenario>El agente recibe la lista de candidatos no seleccionados y genera mensajes personalizados</scenario>
+            <input>Resultados de evaluación, datos del candidato</input>
+            <process>1. Analiza resultados, 2. Genera mensaje, 3. Envía email, 4. Monitorea entrega</process>
+            <output>Mensaje de retroalimentación enviado</output>
+            <learnings>La personalización aumenta la satisfacción y reputación</learnings>
+            <metrics_achieved>Tiempo de entrega &lt; 24h, satisfacción &gt; 90%</metrics_achieved>
+        </example>
+    </usage_examples>
+    <documentation>
+        <getting_started>
+            <step number="1">
+                <title>Configuración inicial</title>
+                <description>Configura integración con sistemas de RRHH y correo</description>
+                <estimated_time>30 minutos</estimated_time>
+                <prerequisites>Acceso a sistema de RRHH, credenciales de correo</prerequisites>
+                <troubleshooting>Si falla integración, contactar soporte</troubleshooting>
+            </step>
+            <step number="2">
+                <title>Personalización de plantillas</title>
+                <description>Adapta el contenido y tono de los mensajes</description>
+                <estimated_time>15 minutos</estimated_time>
+            </step>
+        </getting_started>
+        <best_practices>
+            <practice category="quality">
+                <title>Personalización y empatía</title>
+                <description>Adaptar cada mensaje al perfil y resultados del candidato</description>
+                <example>Mensaje con sugerencias de mejora específicas</example>
+                <benefits>Mejora reputación y experiencia</benefits>
+            </practice>
+        </best_practices>
+        <troubleshooting>
+            <issue category="technical">
+                <problem>No se envía el mensaje</problem>
+                <symptoms>Error en sistema de correo</symptoms>
+                <diagnosis>Verificar credenciales y conexión</diagnosis>
+                <solution>Actualizar credenciales y reintentar</solution>
+                <prevention>Monitoreo automático y alertas</prevention>
+            </issue>
+        </troubleshooting>
+        <faq>
+            <item>
+                <question>¿Cómo se protege la privacidad de los candidatos?</question>
+                <answer>Mediante controles de acceso, cifrado y cumplimiento normativo</answer>
+                <related_sections>constraints, data_constraints</related_sections>
+            </item>
+            <item>
+                <question>¿Puedo personalizar los mensajes?</question>
+                <answer>Sí, las plantillas permiten personalización avanzada</answer>
+                <related_sections>templates, documentation</related_sections>
+            </item>
+        </faq>
+    </documentation>
+    <version_history>
+        <version number="1.0.0" date="2025-10-15" status="production">
+            <changes>
+                <change type="feature">Primera versión conforme a estándar DEVELOP v3</change>
+                <change type="feature">Automatización de generación y envío de retroalimentación</change>
+            </changes>
+            <migration_notes>Vacío para versión inicial</migration_notes>
+            <breaking_changes>Vacío para versión inicial</breaking_changes>
+        </version>
+    </version_history>
+    <mission_statement>
+        <mission>Optimizar la experiencia de candidatos no seleccionados mediante retroalimentación automatizada, humana y conforme a mejores prácticas de RRHH.</mission>
+        <vision>Ser referente en comunicación profesional y empática en procesos de selección, logrando satisfacción superior al 90% y tiempos de respuesta menores a 24 horas.</vision>
+        <success_definition>Entrega de feedback &lt; 24h, satisfacción &gt; 90%, cumplimiento normativo 100%</success_definition>
+        <value_proposition>Automatización total, personalización avanzada y cumplimiento normativo garantizado</value_proposition>
+    </mission_statement>
+    <implementation_plan>
+        <phase name="diagnosis" order="1">
+            <duration>2 semanas</duration>
+            <objectives>
+                <objective>Evaluar estado actual y readiness organizacional</objective>
+                <objective>Identificar stakeholders y champions</objective>
+                <objective>Definir scope inicial y constraints</objective>
+            </objectives>
+            <activities>
+                <activity>
+                    <description>Assessment de estado actual</description>
+                    <responsible>Implementation Lead</responsible>
+                    <dependencies>Acceso a stakeholders</dependencies>
+                </activity>
+            </activities>
+            <deliverables>
+                <deliverable>Assessment report</deliverable>
+            </deliverables>
+            <success_criteria>
+                <criterion>Stakeholders identificados y comprometidos</criterion>
+            </success_criteria>
+            <risks>
+                <risk severity="high">
+                    <description>Resistencia organizacional</description>
+                    <mitigation>Executive sponsorship, communication plan</mitigation>
+                </risk>
+            </risks>
+        </phase>
+        <phase name="pilot" order="2">
+            <duration>4 semanas</duration>
+            <objectives>
+                <objective>Validar agente con grupo piloto</objective>
+            </objectives>
+        </phase>
+        <phase name="rollout" order="3">
+            <duration>8 semanas</duration>
+            <objectives>
+                <objective>Deploy agente a toda la organización</objective>
+            </objectives>
+        </phase>
+        <rollout_strategy>
+            <approach>Phased</approach>
+            <pilot_criteria>Team con alto engagement, use case bien definido</pilot_criteria>
+            <success_metrics>Adoption rate &gt; 70% en 3 meses, satisfacción &gt; 4/5</success_metrics>
+        </rollout_strategy>
+    </implementation_plan>
+    <training_requirements>
+        <audience name="power_users">
+            <role_description>Usuarios avanzados que usarán el agente intensivamente</role_description>
+            <training_objectives>
+                <objective>Dominar todas las funcionalidades del agente</objective>
+            </training_objectives>
+            <training_content>
+                <module name="introduction">
+                    <description>Introducción y overview del agente</description>
+                    <duration>1 hora</duration>
+                    <format>Online</format>
+                    <materials>Slide deck, demo environment</materials>
+                </module>
+            </training_content>
+            <assessment>
+                <method>Practical exam</method>
+                <passing_criteria>80% de ejercicios completados correctamente</passing_criteria>
+            </assessment>
+            <follow_up>
+                <support>Office hours semanales</support>
+                <refresher_frequency>Anual</refresher_frequency>
+            </follow_up>
+        </audience>
+        <audience name="casual_users">
+            <role_description>Usuarios ocasionales</role_description>
+            <training_objectives>
+                <objective>Uso básico para casos comunes</objective>
+            </training_objectives>
+            <training_content>
+                <module name="quick_start">
+                    <description>Quick start de 30 minutos</description>
+                    <duration>30 minutos</duration>
+                    <format>Self-paced</format>
+                    <materials>Video tutorial, written guide</materials>
+                </module>
+            </training_content>
+        </audience>
+        <change_management>
+            <communication_plan>Pre-launch: Awareness campaign, Launch: Kickoff events, Post-launch: Success stories</communication_plan>
+            <resistance_management>Identify resisters early, address concerns proactively</resistance_management>
+            <success_factors>Executive sponsorship, champions, training de calidad</success_factors>
+        </change_management>
+    </training_requirements>
+    <data_architecture>
+        <data_models>
+            <model name="feedback" type="logical">
+                <description>Modelo de datos para mensajes de retroalimentación</description>
+                <entities>
+                    <entity name="Mensaje">
+                        <description>Mensaje enviado al candidato</description>
+                        <attributes>
+                            <attribute name="id" type="UUID">
+                                <description>Identificador único</description>
+                                <constraints>PK, NOT NULL</constraints>
+                                <default_value>gen_random_uuid()</default_value>
+                            </attribute>
+                            <attribute name="candidato_id" type="UUID">
+                                <description>Identificador del candidato</description>
+                                <constraints>NOT NULL</constraints>
+                            </attribute>
+                            <attribute name="fecha_envio" type="TIMESTAMP">
+                                <description>Fecha de envío</description>
+                                <constraints>NOT NULL</constraints>
+                                <default_value>NOW()</default_value>
+                            </attribute>
+                        </attributes>
+                    </entity>
+                </entities>
+            </model>
+        </data_models>
+        <database_requirements>
+            <engine>PostgreSQL</engine>
+            <version>14+</version>
+            <minimum_version>14.0</minimum_version>
+            <acid_compliance>
+                <requirement>Atomicity: Transactions must be atomic</requirement>
+                <requirement>Consistency: Constraints must be enforced</requirement>
+                <requirement>Isolation: SERIALIZABLE isolation level</requirement>
+                <requirement>Durability: WAL enabled</requirement>
+            </acid_compliance>
+            <normalization_level>3NF</normalization_level>
+            <extensions_required>
+                <extension>uuid-ossp</extension>
+                <extension>pg_trgm</extension>
+            </extensions_required>
+        </database_requirements>
+        <data_governance>
+            <data_dictionary>
+                <table name="mensajes">
+                    <description>Tabla de mensajes enviados</description>
+                    <owner>RRHH</owner>
+                    <sensitivity>High</sensitivity>
+                    <retention_policy>12 meses</retention_policy>
+                </table>
+            </data_dictionary>
+            <backup_recovery>
+                <backup_frequency>Daily full + hourly incremental</backup_frequency>
+                <retention>30 días online, 1 año archived</retention>
+                <recovery_rto>4 horas</recovery_rto>
+                <recovery_rpo>1 hora</recovery_rpo>
+                <testing_frequency>Quarterly</testing_frequency>
+            </backup_recovery>
+            <migration_strategy>
+                <versioning>Sequential numbered migrations (001, 002, etc)</versioning>
+                <tool>Flyway</tool>
+                <rollback_procedure>Restore from backup, apply rollback migration, verify integrity</rollback_procedure>
+            </migration_strategy>
+            <data_quality>
+                <validation_rules>
+                    <rule>No duplicados</rule>
+                    <rule>Integridad referencial</rule>
+                </validation_rules>
+                <monitoring>Null rate checks, duplicate detection, referential integrity</monitoring>
+            </data_quality>
+        </data_governance>
+    </data_architecture>
+    <resources>
+        <documentation_links>
+            <link type="official_docs">https://todoacademy.com/docs/feedback-agent</link>
+            <link type="tutorial">https://todoacademy.com/tutorials/feedback-agent</link>
+            <link type="api_reference">https://todoacademy.com/api/feedback-agent</link>
+        </documentation_links>
+        <community_resources>
+            <resource>Slack TODO Academy</resource>
+            <resource>GitHub TODO Academy</resource>
+        </community_resources>
+        <learning_resources>
+            <resource>Curso: Automatización en RRHH</resource>
+            <resource>Libro: Comunicación Empática en Selección</resource>
+        </learning_resources>
+    </resources>
+    <anti_patterns>
+        <anti_pattern name="mensaje_genérico" severity="high">
+            <description>Enviar mensajes sin personalización ni empatía</description>
+            <symptoms>Respuestas negativas, baja satisfacción</symptoms>
+            <why_bad>Reduce reputación y experiencia</why_bad>
+            <solution>Validar contenido y personalizar</solution>
+            <detection>Herramienta de NLP y revisión manual</detection>
+            <example type="bad">"No fuiste seleccionado"</example>
+            <example type="good">"Agradecemos tu participación, te sugerimos fortalecer X"</example>
+        </anti_pattern>
+    </anti_patterns>
+    <document_metadata>
+        <schema_version>DEVELOP-Standard v3.0.0</schema_version>
+        <template_version>3.0.0</template_version>
+        <last_template_update>2025-10-15</last_template_update>
+        <validation>
+            <xml_valid>true</xml_valid>
+            <schema_compliant>true</schema_compliant>
+            <completeness_score>Enterprise</completeness_score>
+        </validation>
+        <credits>
+            <innovation_source>PMO innovations (pmo-assistant-unificado v1.0.0)</innovation_source>
+            <maintained_by>Architecture Team TODO Academy</maintained_by>
+        </credits>
+    </document_metadata>
+</agent_specification>
+

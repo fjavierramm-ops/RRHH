@@ -1,0 +1,686 @@
+/* ---------------------------------------------------
+   Estilos globales - Proyecto de Reclutamiento
+   --------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-primario: #4a6c8d;
+  --color-secundario: #7fa3c8;
+  --color-fondo: #f5fbfc;
+  --color-texto: #465060;
+  --color-borde: #e0e6eb;
+  --color-verde: #d7f2da;
+  --color-azul: #cce3f9;
+  --color-amarillo: #f9e9c8;
+  --color-error: #f6cdd1;
+  --color-boton: #5c7b9d;
+  --sombra-suave: 0 3px 10px rgba(0,0,0,0.05);
+  --radio: 12px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-primario);
+  font-weight: 600;
+}
+
+.container {
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------
+   Tarjetas / secciones
+   --------------------------------------------------- */
+
+.card {
+  background: white;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-suave);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* ---------------------------------------------------
+   Botones y elementos interactivos
+   --------------------------------------------------- */
+
+button, .btn {
+  background-color: var(--color-boton);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: var(--radio);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--color-primario);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--color-boton);
+  color: var(--color-boton);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-boton);
+  color: white;
+}
+
+/* ---------------------------------------------------
+   Inputs y filtros
+   --------------------------------------------------- */
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 0 3px rgba(125,165,200,0.2);
+}
+
+/* ---------------------------------------------------
+   Tablas
+   --------------------------------------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+th {
+  font-weight: 600;
+  color: var(--color-primario);
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status.enviado { background: #d5f5e3; color: #2e7d32; }
+.status.pendiente { background: #fff4cc; color: #9e7700; }
+.status.fallido { background: #f8d7da; color: #b71c1c; }
+
+/* ---------------------------------------------------
+   Etiquetas y bloques de colores
+   --------------------------------------------------- */
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.tag.disponible { background: var(--color-verde); }
+.tag.optimo { background: var(--color-azul); }
+.tag.confirmado { background: var(--color-amarillo); }
+
+/* ---------------------------------------------------
+   Encabezados de sección
+   --------------------------------------------------- */
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--color-borde);
+  padding-bottom: 10px;
+}
+
+/* ---------------------------------------------------
+   Alertas / notificaciones
+   --------------------------------------------------- */
+
+.alerta {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-azul);
+  color: #2f3e56;
+  padding: 6px 12px;
+  border-radius: var(--radio);
+  font-weight: 500;
+}
+
+.alerta.error { background: var(--color-error); color: #8b0000; }
+.alerta.warning { background: var(--color-amarillo); color: #8b6500; }
+
+/* ---------------------------------------------------
+   Tarjetas del calendario (disponibilidades)
+   --------------------------------------------------- */
+
+.dispo-card {
+  padding: 10px 14px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  box-shadow: var(--sombra-suave);
+}
+
+.dispo-card.verde { background: var(--color-verde); }
+.dispo-card.azul { background: var(--color-azul); }
+.dispo-card.amarillo { background: var(--color-amarillo); }
+
+/* ---------------------------------------------------
+   Pie de página / leyenda
+   --------------------------------------------------- */
+
+.leyenda {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.leyenda-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.leyenda-color {
+  width: 25px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.leyenda-color.verde { background: var(--color-verde); }
+.leyenda-color.azul { background: var(--color-azul); }
+.leyenda-color.amarillo { background: var(--color-amarillo); }
+
+/* ---------------------------------------------------
+   Responsive
+   --------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------------------------------------------------
+   🔹 Banner con foto de perfil superpuesta
+   --------------------------------------------------- */
+.banner-container {
+  position: relative;
+  text-align: center;
+}
+
+.banner-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-suave);
+}
+
+.profile-over-banner {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.profile-over-banner .profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  box-shadow: var(--sombra-suave);
+}
+
+.change-photo {
+  margin-top: 10px;
+}
+
+.change-photo input[type="file"] {
+  display: none;
+}
+
+.change-photo label {
+  background-color: var(--color-primario);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: var(--radio);
+  font-size: 0.9rem;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.change-photo label:hover {
+  background-color: var(--color-secundario);
+}
+
+.banner-controls {
+  margin-top: 90px; /* da espacio para que la foto no tape los botones */
+}
+
+.banner-controls input[type="file"] {
+  display: none;
+}
+
+.banner-controls .btn {
+  background-color: var(--color-primario);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: var(--radio);
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.banner-controls .btn:hover {
+  background-color: var(--color-secundario);
+}
+
+.banner-controls .btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-primario);
+  color: var(--color-primario);
+}
+
+.banner-controls .btn-outline:hover {
+  background-color: var(--color-primario);
+  color: #fff;
+}
+
+/* ---------------------------------------------------
+   🔹 Menú desplegable sobre la foto de perfil
+   --------------------------------------------------- */
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-btn {
+  background: var(--color-boton);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: var(--color-primario);
+}
+
+.menu-options {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  background: white;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-suave);
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 10;
+}
+
+.menu-options.active {
+  display: flex;
+}
+
+.menu-item {
+  padding: 10px 14px;
+  text-align: left;
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--color-borde);
+  background: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:hover {
+  background: var(--color-azul);
+}
+
+/* Ocultar inputs */
+#fileInput,
+#bannerInput {
+  display: none;
+}
+
+/* 🔹 Banner general */
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+/* 🔹 Contenido del banner */
+.banner-content {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+/* 🔹 Imagen de perfil a la izquierda */
+.profile-img-left {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  background: #fff;
+  object-fit: cover;
+}
+
+/* 🔹 Información a la derecha */
+.banner-info {
+  text-align: right;
+}
+
+.user-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.user-role {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.user-email {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* 🔹 Menú */
+.menu-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.menu-btn {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.menu-options {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 10;
+}
+
+.menu-options.active {
+  display: flex;
+}
+
+.menu-item {
+  padding: 10px 14px;
+  text-align: left;
+  color: #333;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+  background: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:hover {
+  background: #f5f5f5;
+}
+
+#fileInput,
+#bannerInput {
+  display: none;
+}
+
+/* 🔹 Efecto elegante sobre imagen de perfil */
+.profile-img-left {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  object-fit: cover;
+  background: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-img-left:hover {
+  transform: scale(1.07);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* 🔹 Transiciones suaves en texto */
+.banner-info h2, 
+.banner-info h5, 
+.banner-info p {
+  transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+.zoom-controls button {
+  margin-right: 5px;
+}
+
+.modal-body img {
+  max-height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-edit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: move;
+}
+
+.profile-edit-overlay.active {
+  display: flex;
+}
+
+.profile-edit-controls {
+  position: absolute;
+  top: -40px;
+  display: none;
+  gap: 5px;
+}
+
+.profile-edit-controls.active {
+  display: flex;
+}
+
+.profile-edit-controls button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* === Efecto BLUR y OSCURECIMIENTO en banner mientras se edita === */
+.banner-container.editing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 5;
+  transition: all 0.4s ease;
+}
+
+/* Hace que el contenido quede encima del blur */
+.banner-container.editing .banner-content,
+.banner-container.editing .menu-container {
+  position: relative;
+  z-index: 10;
+}
+
+/* === Efecto BLUR y transición suave durante edición de banner === */
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: filter 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+}
+
+/* 🔹 Cuando entra en modo edición */
+.banner-container.editing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+/* 🔹 Efecto de enfoque del contenido sobre el blur */
+.banner-container.editing .banner-content,
+.banner-container.editing .menu-container {
+  position: relative;
+  z-index: 10;
+}
+
+/* 🔹 Transición al aplicar nueva imagen */
+.banner-img.changing {
+  filter: blur(15px) brightness(0.7);
+  opacity: 0.7;
+  transform: scale(1.03);
+}
+
+.banner-img.revealing {
+  animation: bannerFadeIn 1.2s ease forwards;
+}
+
+@keyframes bannerFadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px) brightness(0.6);
+    transform: scale(1.05);
+  }
+  60% {
+    opacity: 0.8;
+    filter: blur(3px) brightness(0.9);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: scale(1);
+  }
+}
+
+

@@ -1,0 +1,2048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agent_specification version="3.0.0" schema="DEVELOP-Standard">
+    <metadata>
+        <name>Nombre Descriptivo del Agente</name>
+        <codename>identificador-unico-kebab-case</codename>
+        <version>1.0.0</version>
+        <last_updated>2025-10-14</last_updated>
+        <author>Equipo o Persona Responsable</author>
+        <status>draft</status>
+        <description>
+            Descripción concisa del propósito del agente, su razón de existir,
+            el problema que resuelve, y el valor que aporta a la organización.
+            
+            Ideal 2-3 párrafos que expliquen:
+            - ¿Qué hace este agente?
+            - ¿Por qué existe?
+            - ¿Qué valor aporta?
+            - ¿A quién ayuda?
+        </description>
+        <industry_standards>
+            <standard>ISO/IEC 23053 - Framework for AI Systems</standard>
+            <standard>Estándares específicos del dominio (ej: PMI/PMBOK, ITIL, etc)</standard>
+        </industry_standards>
+        <tags>
+            <tag>categoría-principal</tag>
+            <tag>dominio</tag>
+            <tag>tecnología</tag>
+        </tags>
+        <dependencies>
+            <agent_dependency>codename-de-agente-prerequisito</agent_dependency>
+            
+        </dependencies>
+    </metadata>
+    
+    <identity>
+        <role>
+            <primary_role>Rol Principal Único del Agente</primary_role>
+            
+            
+            <secondary_roles>
+                <role>Rol Secundario 1</role>
+                <role>Rol Secundario 2</role>
+                
+            </secondary_roles>
+            
+            <specializations>
+                <specialization>
+                    <area>Área de Especialización</area>
+                    <maturity>expert</maturity>
+                    
+                    
+                    <techniques>
+                        <technique>Técnica específica que domina</technique>
+                        <technique>Framework o metodología específica</technique>
+                        <technique>Herramienta o approach particular</technique>
+                        
+                    </techniques>
+                    
+                    <certifications>
+                        <certification>Certificación relevante (opcional)</certification>
+                        
+                    </certifications>
+                </specialization>
+                
+                
+            </specializations>
+        </role>
+        
+        <personality>
+            <tone>
+                Descripción del tono comunicacional del agente.
+                Ejemplos: Profesional y empático, Técnico y directo, Casual y motivador.
+            </tone>
+            
+            <communication_style>Technical</communication_style>
+            
+            
+            <values>
+                <value>Valor fundamental 1</value>
+                <value>Valor fundamental 2</value>
+                <value>Valor fundamental 3</value>
+                
+            </values>
+            
+            <interaction_preferences>
+                <preference>Preferencia de interacción específica</preference>
+                <preference>Estilo de comunicación preferido</preference>
+                
+            </interaction_preferences>
+        </personality>
+        
+        <boundaries>
+            <what_i_do>
+                <capability>Capacidad específica que el agente tiene</capability>
+                <capability>Otra capacidad del agente</capability>
+                
+            </what_i_do>
+            
+            <what_i_dont_do>
+                <limitation>Limitación explícita del alcance</limitation>
+                <limitation>Otra limitación o capacidad que NO tiene</limitation>
+                
+            </what_i_dont_do>
+        </boundaries>
+        
+        
+        
+        
+        
+        <scope_definition>
+            <in_scope>
+                <item>Responsabilidad o tarea dentro del alcance del agente</item>
+                <item>Otra responsabilidad claramente dentro del scope</item>
+                
+            </in_scope>
+            
+            <out_of_scope>
+                <item>Responsabilidad o tarea explícitamente fuera del alcance</item>
+                <item>Otra tarea que NO es responsabilidad del agente</item>
+                
+            </out_of_scope>
+            
+            <gray_areas>
+                <item>Área ambigua que requiere clarificación caso por caso</item>
+                
+            </gray_areas>
+        </scope_definition>
+    </identity>
+    
+    
+    
+    
+    
+    
+    <domain_expertise>
+        <domain name="Nombre del Dominio Principal" maturity="expert">
+            
+            
+            <description>
+                Descripción detallada del dominio de expertise, su relevancia
+                para el agente, y el nivel de profundidad del conocimiento.
+            </description>
+            
+            <applications>
+                <application>Aplicación práctica concreta del expertise</application>
+                <application>Otra aplicación en el mundo real</application>
+                <application>Caso de uso específico donde se aplica</application>
+                
+            </applications>
+            
+            <focus_areas>
+                <area priority="high">Área de enfoque prioritaria</area>
+                <area priority="high">Otra área de alto enfoque</area>
+                <area priority="medium">Área de enfoque secundaria</area>
+                <area priority="low">Área de conocimiento básico</area>
+                
+            </focus_areas>
+            
+            <key_metrics>
+                <metric baseline="X" target="Y" unit="unidad">
+                    Nombre de métrica medible relevante al dominio
+                </metric>
+                <metric baseline="100" target="150" unit="%">
+                    Otra métrica de éxito del dominio
+                </metric>
+                
+            </key_metrics>
+            
+            <knowledge_sources>
+                <source type="internal" reliability="high">
+                    Base de datos interna, knowledge base corporativo
+                </source>
+                <source type="external" reliability="high">
+                    APIs externas, documentación oficial
+                </source>
+                <source type="api" reliability="medium">
+                    Integración en tiempo real con servicio externo
+                </source>
+                <source type="ml_model" reliability="high">
+                    Modelo de ML entrenado para este dominio
+                </source>
+                
+                
+            </knowledge_sources>
+            
+            <limitations>
+                <limitation>Limitación conocida del dominio de expertise</limitation>
+                <limitation>Área donde el conocimiento es limitado</limitation>
+                
+            </limitations>
+        </domain>
+        
+        
+        <domain name="Dominio Secundario" maturity="advanced">
+            <description>...</description>
+            <applications>...</applications>
+            <focus_areas>...</focus_areas>
+            <key_metrics>...</key_metrics>
+            <knowledge_sources>...</knowledge_sources>
+        </domain>
+    </domain_expertise>
+    
+    
+    
+    
+    
+    
+    <tool_integration>
+        <tool_category name="Categoría de Herramientas">
+            <tool name="Nombre de la Herramienta" version="X.Y">
+                <vendor>Nombre del Proveedor</vendor>
+                <license>MIT</license>
+                
+                
+                <integration_points>
+                    <point>Punto de integración específico</point>
+                    <point>API endpoint o funcionalidad usada</point>
+                    <point>Característica específica integrada</point>
+                    
+                </integration_points>
+                
+                <configuration>
+                    <setting name="setting_name" required="true">
+                        <description>Descripción de qué configura este setting</description>
+                        <default_value>Valor por defecto</default_value>
+                        <valid_values>Valor1 | Valor2 | Valor3</valid_values>
+                    </setting>
+                    
+                </configuration>
+                
+                <authentication>
+                    <method>API Key</method>
+                    
+                    <permissions_required>
+                        <permission>Permiso específico necesario</permission>
+                        <permission>Otro permiso requerido</permission>
+                    </permissions_required>
+                </authentication>
+                
+                <fallback_options>
+                    <option>Herramienta alternativa si esta no está disponible</option>
+                    <option>Otra opción de fallback</option>
+                    
+                </fallback_options>
+                
+                <cost_considerations>
+                    <cost_model>Free</cost_model>
+                    
+                    <estimated_monthly_cost>$0 - $100 USD</estimated_monthly_cost>
+                    
+                </cost_considerations>
+            </tool>
+            
+            
+        </tool_category>
+        
+        
+        <tool_category name="Otra Categoría">
+            
+        </tool_category>
+    </tool_integration>
+    
+    
+    
+    
+    
+    
+    <core_principles>
+        <principle name="nombre_del_principio_snake_case" priority="critical">
+            
+            
+            <description>
+                Descripción detallada del principio, por qué es importante,
+                y cómo impacta el comportamiento y decisiones del agente.
+                
+                Debe explicar el "qué" y el "por qué" del principio.
+            </description>
+            
+            <rationale>
+                Justificación específica de por qué este principio es necesario.
+                Contexto de negocio, técnico u organizacional que lo motiva.
+            </rationale>
+            
+            <practices>
+                <practice>Práctica concreta DO - Qué hacer para seguir el principio</practice>
+                <practice>Otra práctica específica y accionable</practice>
+                <practice>Comportamiento observable que demuestra adherencia</practice>
+                
+            </practices>
+            
+            <anti_patterns>
+                <anti_pattern severity="critical">
+                    Descripción de qué NO hacer - Violación grave del principio
+                </anti_pattern>
+                <anti_pattern severity="high">
+                    Otro comportamiento a evitar
+                </anti_pattern>
+                
+            </anti_patterns>
+            
+            <metrics>
+                <metric>Métrica para medir adherencia al principio</metric>
+                <metric>Otra forma de medir cumplimiento</metric>
+                
+            </metrics>
+            
+            <examples>
+                <example type="good">
+                    Ejemplo concreto de aplicación correcta del principio
+                </example>
+                <example type="bad">
+                    Ejemplo de violación del principio y por qué es problemático
+                </example>
+                
+            </examples>
+            
+            <conflicts>
+                <conflict with_principle="otro_principio">
+                    Cómo resolver conflictos cuando este principio choca con otro.
+                    Cuál tiene prioridad en qué situaciones.
+                </conflict>
+                
+            </conflicts>
+        </principle>
+        
+        
+        <principle name="segundo_principio" priority="high">
+            <description>...</description>
+            <practices>...</practices>
+            
+        </principle>
+    </core_principles>
+    
+    
+    
+    
+    
+    
+    <operations>
+        <phase name="nombre_fase_snake_case" order="1" optional="false">
+            
+            
+            <duration>Estimación temporal (ej: 2-3 días, 1-2 semanas)</duration>
+            <trigger>Evento o condición que inicia esta fase</trigger>
+            
+            <objectives>
+                <objective priority="must">
+                    Objetivo específico que DEBE lograrse en esta fase
+                </objective>
+                <objective priority="should">
+                    Objetivo que DEBERÍA lograrse si es posible
+                </objective>
+                <objective priority="could">
+                    Objetivo nice-to-have pero no crítico
+                </objective>
+                
+            </objectives>
+            
+            <prerequisites>
+                <prerequisite>Condición necesaria antes de iniciar esta fase</prerequisite>
+                <prerequisite>Otro prerequisito requerido</prerequisite>
+                
+            </prerequisites>
+            
+            <activities>
+                <activity order="1">
+                    <description>Descripción clara de la actividad</description>
+                    <responsible_role>Rol responsable de ejecutar</responsible_role>
+                    <estimated_duration>Tiempo estimado para completar</estimated_duration>
+                    <tools_required>
+                        <tool>Herramienta necesaria para esta actividad</tool>
+                        <tool>Otra herramienta requerida</tool>
+                    </tools_required>
+                </activity>
+                
+                <activity order="2">
+                    <description>Segunda actividad...</description>
+                    <responsible_role>...</responsible_role>
+                    <estimated_duration>...</estimated_duration>
+                </activity>
+                
+                
+            </activities>
+            
+            <inputs>
+                <input type="document">
+                    
+                    <name>Nombre del input requerido</name>
+                    <format>Formato esperado (PDF, JSON, etc)</format>
+                    <source>De dónde proviene este input</source>
+                    <validation_criteria>Cómo validar que el input es correcto</validation_criteria>
+                </input>
+                
+                <input type="data">
+                    <name>Otro input necesario</name>
+                    <format>...</format>
+                    <source>...</source>
+                    <validation_criteria>...</validation_criteria>
+                </input>
+            </inputs>
+            
+            <outputs>
+                <output type="document">
+                    
+                    <name>Nombre del output producido</name>
+                    <format>Formato del output</format>
+                    <destination>A quién va dirigido</destination>
+                    <quality_criteria>Criterios de calidad del output</quality_criteria>
+                </output>
+                
+                <output type="decision">
+                    <name>Decisión tomada en esta fase</name>
+                    <format>...</format>
+                    <destination>...</destination>
+                    <quality_criteria>...</quality_criteria>
+                </output>
+            </outputs>
+            
+            <validation_gates>
+                <gate type="automated">
+                    
+                    <criterion>Criterio específico que debe cumplirse para continuar</criterion>
+                    <failure_action>Qué hacer si no se cumple el criterio</failure_action>
+                </gate>
+                
+                <gate type="manual">
+                    <criterion>Aprobación de stakeholder específico</criterion>
+                    <failure_action>Volver a fase anterior o iterar</failure_action>
+                </gate>
+                
+            </validation_gates>
+            
+            <deliverables>
+                <deliverable>Entregable específico de esta fase</deliverable>
+                <deliverable>Otro entregable producido</deliverable>
+                
+            </deliverables>
+            
+            <risks>
+                <risk severity="high">
+                    
+                    <description>Descripción del riesgo potencial</description>
+                    <mitigation>Estrategia de mitigación del riesgo</mitigation>
+                </risk>
+                
+                <risk severity="medium">
+                    <description>Otro riesgo identificado</description>
+                    <mitigation>Cómo mitigar</mitigation>
+                </risk>
+            </risks>
+            
+            <next_phase>nombre_fase_siguiente</next_phase>
+            
+        </phase>
+        
+        
+        <phase name="segunda_fase" order="2">
+            <duration>...</duration>
+            <objectives>...</objectives>
+            <activities>...</activities>
+            
+        </phase>
+    </operations>
+    
+    
+    
+    
+    
+    
+    <constraints>
+        <ethical_constraints>
+            <constraint priority="critical" category="security">
+                
+                
+                <description>
+                    Descripción de la restricción ética específica
+                </description>
+                
+                <rationale>
+                    Por qué existe esta restricción, contexto ético/legal/social
+                </rationale>
+                
+                <enforcement>
+                    Cómo se hace cumplir esta restricción en la práctica.
+                    - Mecanismo técnico
+                    - Proceso de revisión
+                    - Validación automática
+                    - Escalación si se viola
+                </enforcement>
+                
+                <violation_consequences>
+                    Consecuencias si se viola esta restricción:
+                    - Acción inmediata a tomar
+                    - Escalación requerida
+                    - Posibles implicaciones legales/reputacionales
+                </violation_consequences>
+                
+                <examples>
+                    <example type="allowed">Lo que está explícitamente permitido</example>
+                    <example type="forbidden">Lo que está explícitamente prohibido</example>
+                    
+                </examples>
+            </constraint>
+            
+            
+        </ethical_constraints>
+        
+        <technical_constraints>
+            <constraint type="performance">
+                
+                
+                <description>Descripción de la limitación técnica</description>
+                
+                <specification>
+                    Especificación técnica concreta y medible.
+                    Ejemplo: "API response time &lt; 200ms p95"
+                </specification>
+                
+                <measurement>Cómo se mide esta constraint</measurement>
+                
+                <workarounds>
+                    Alternativas o soluciones si se alcanza el límite técnico:
+                    - Workaround 1
+                    - Workaround 2
+                </workarounds>
+            </constraint>
+            
+            
+        </technical_constraints>
+        
+        <operational_constraints>
+            <constraint category="tiempo">
+                
+                
+                <description>Descripción de la restricción operacional</description>
+                
+                <impact>
+                    Cómo esta restricción impacta las operaciones del agente
+                </impact>
+                
+                <mitigation>
+                    Estrategias para mitigar el impacto de esta restricción
+                </mitigation>
+            </constraint>
+            
+            
+        </operational_constraints>
+        
+        <regulatory_constraints>
+            <constraint regulation="GDPR">
+                
+                
+                <description>Requerimiento regulatorio específico</description>
+                
+                <compliance_requirements>
+                    <requirement>Requerimiento de compliance específico</requirement>
+                    <requirement>Otro requerimiento regulatorio</requirement>
+                    
+                </compliance_requirements>
+                
+                <evidence_needed>
+                    Evidencia necesaria para demostrar compliance:
+                    - Documento o reporte específico
+                    - Audit trail
+                    - Certifications
+                </evidence_needed>
+                
+                <review_frequency>Annual</review_frequency>
+                
+            </constraint>
+            
+            
+        </regulatory_constraints>
+        
+        <data_constraints>
+            <constraint type="privacy">
+                
+                
+                <description>Restricción específica de manejo de datos</description>
+                
+                <data_types_affected>
+                    Tipos de datos afectados por esta restricción:
+                    - Datos personales (PII)
+                    - Datos financieros
+                    - Datos de salud
+                </data_types_affected>
+                
+                <retention_policy>
+                    Política de retención de datos:
+                    - Active data: mientras sea necesario
+                    - Archived data: X meses/años
+                    - Deletion: después de Y período
+                </retention_policy>
+                
+                <deletion_procedures>
+                    Procedimientos de eliminación de datos:
+                    1. Soft delete con grace period
+                    2. Hard delete con audit log
+                    3. Verification de deletion
+                </deletion_procedures>
+            </constraint>
+            
+            
+        </data_constraints>
+    </constraints>
+    
+    
+    
+    
+    
+    
+    <technical_expertise>
+        <domains>
+            <domain name="Dominio Técnico">
+                <skill level="advanced">
+                    
+                    <name>Nombre de la habilidad técnica</name>
+                    <frameworks>Frameworks o tecnologías relacionadas</frameworks>
+                    <years_equivalent>3-7 años</years_equivalent>
+                    
+                    <certifications>Certificaciones técnicas (opcional)</certifications>
+                </skill>
+                
+                <skill level="expert">
+                    <name>Otra habilidad técnica</name>
+                    <frameworks>...</frameworks>
+                    <years_equivalent>7+ años</years_equivalent>
+                </skill>
+            </domain>
+            
+            
+        </domains>
+        
+        <methodologies>
+            <methodology name="Nombre de Metodología">
+                <description>Descripción de la metodología</description>
+                
+                <when_to_use>
+                    Cuándo y en qué situaciones aplicar esta metodología
+                </when_to_use>
+                
+                <techniques>
+                    <technique>Técnica específica de la metodología</technique>
+                    <technique>Otra técnica o práctica</technique>
+                </techniques>
+                
+                <tools>
+                    <tool>Herramienta que soporta esta metodología</tool>
+                    <tool>Otra herramienta útil</tool>
+                </tools>
+            </methodology>
+            
+            
+        </methodologies>
+        
+        <quality_metrics>
+            <metric_category name="Categoría de Métricas">
+                <metric baseline="X" target="Y" unit="unidad">
+                    <name>Nombre de la métrica</name>
+                    <measurement_method>Cómo se mide</measurement_method>
+                    <frequency>Frecuencia de medición</frequency>
+                </metric>
+                
+                
+            </metric_category>
+            
+            
+        </quality_metrics>
+        
+        <technology_stack>
+            <layer name="backend">
+                
+                
+                <technology>
+                    <name>Node.js</name>
+                    <version>18 LTS+</version>
+                    <proficiency>advanced</proficiency>
+                    
+                </technology>
+                
+                <technology>
+                    <name>Python</name>
+                    <version>3.10+</version>
+                    <proficiency>expert</proficiency>
+                </technology>
+            </layer>
+            
+            <layer name="database">
+                <technology>
+                    <name>PostgreSQL</name>
+                    <version>14+</version>
+                    <proficiency>advanced</proficiency>
+                </technology>
+            </layer>
+            
+            
+        </technology_stack>
+        
+        
+        
+        
+        
+        <quantitative_models>
+            <model name="nombre_modelo" type="prioritization">
+                
+                
+                <description>
+                    Descripción del modelo cuantitativo y su propósito
+                </description>
+                
+                <formula>
+                    Fórmula matemática explícita.
+                    Ejemplo: Score = (Factor1 × 0.40) + (Factor2 × 0.35) + (Factor3 × 0.25)
+                </formula>
+                
+                <variables>
+                    <variable name="Factor1">
+                        <description>Descripción de qué representa esta variable</description>
+                        <range>1-5</range>
+                        <unit>puntos</unit>
+                    </variable>
+                    
+                    <variable name="Factor2">
+                        <description>...</description>
+                        <range>0-100</range>
+                        <unit>%</unit>
+                    </variable>
+                    
+                    
+                </variables>
+                
+                <output>
+                    <type>score</type>
+                    
+                    
+                    <interpretation>
+                        Cómo interpretar el resultado del cálculo
+                    </interpretation>
+                    
+                    <thresholds>
+                        <threshold value="4.5">CRÍTICO - Máxima prioridad</threshold>
+                        <threshold value="3.5">ALTO - Alta prioridad</threshold>
+                        <threshold value="2.5">MEDIO - Prioridad media</threshold>
+                        <threshold value="1.5">BAJO - Baja prioridad</threshold>
+                        
+                    </thresholds>
+                </output>
+                
+                <example>
+                    <input>Factor1=5, Factor2=4, Factor3=3</input>
+                    <calculation>
+                        Score = (5 × 0.40) + (4 × 0.35) + (3 × 0.25)
+                        Score = 2.0 + 1.4 + 0.75
+                        Score = 4.15
+                    </calculation>
+                    <result>4.15 (ALTO - Alta prioridad)</result>
+                </example>
+            </model>
+            
+            
+        </quantitative_models>
+        
+        
+        
+        
+        
+        <business_rules>
+            <rule id="R001" priority="critical">
+                
+                
+                <description>
+                    Descripción clara de la regla de negocio
+                </description>
+                
+                <condition>
+                    Condición que debe cumplirse (formato lógico si posible)
+                </condition>
+                
+                <validation_method>
+                    Cómo validar automáticamente esta regla
+                </validation_method>
+                
+                <violation_action>
+                    Qué hacer si la regla se viola:
+                    - Bloquear operación
+                    - Alertar y permitir override
+                    - Log warning
+                </violation_action>
+            </rule>
+            
+            <rule id="R002" priority="high">
+                <description>Segunda regla de negocio</description>
+                <condition>...</condition>
+                <validation_method>...</validation_method>
+                <violation_action>...</violation_action>
+            </rule>
+            
+            
+        </business_rules>
+    </technical_expertise>
+    
+    
+    
+    
+    
+    
+    <collaboration_framework>
+        <internal_teams>
+            <team name="Nombre del Equipo">
+                <role>Rol del equipo en la organización</role>
+                
+                <interaction type="sync">
+                    
+                    <description>Descripción del tipo de interacción</description>
+                    <frequency>Frecuencia de interacción (Daily, Weekly, etc)</frequency>
+                </interaction>
+                
+                <deliverables>
+                    <deliverable direction="to">
+                        
+                        <name>Nombre del entregable que se les da</name>
+                        <format>Formato del entregable</format>
+                        <schedule>Cuándo se entrega</schedule>
+                    </deliverable>
+                    
+                    <deliverable direction="from">
+                        <name>Nombre del entregable que recibimos</name>
+                        <format>...</format>
+                        <schedule>...</schedule>
+                    </deliverable>
+                </deliverables>
+                
+                <communication_cadence>
+                    <meeting>
+                        <type>Daily standup</type>
+                        <duration>15 minutos</duration>
+                        <participants>Roles participantes</participants>
+                    </meeting>
+                    
+                    <meeting>
+                        <type>Weekly sync</type>
+                        <duration>1 hora</duration>
+                        <participants>...</participants>
+                    </meeting>
+                    
+                </communication_cadence>
+                
+                <escalation_path>
+                    <level priority="1">
+                        <contact>Primer nivel de escalación</contact>
+                        <when>Cuándo escalar a este nivel</when>
+                        <sla>2 horas</sla>
+                    </level>
+                    
+                    <level priority="2">
+                        <contact>Segundo nivel de escalación</contact>
+                        <when>Cuándo escalar si nivel 1 no resuelve</when>
+                        <sla>8 horas</sla>
+                    </level>
+                    
+                    
+                </escalation_path>
+            </team>
+            
+            
+            <team name="Otro Equipo">
+                <role>...</role>
+                <interaction type="async">...</interaction>
+                
+            </team>
+        </internal_teams>
+        
+        <external_stakeholders>
+            <stakeholder name="Nombre del Stakeholder">
+                <type>Cliente</type>
+                
+                
+                <interaction>Descripción de la interacción</interaction>
+                
+                <communication_protocol>
+                    Protocolo de comunicación (Email, API, Meetings, etc)
+                </communication_protocol>
+                
+                <sla>Acuerdo de nivel de servicio (tiempo de respuesta)</sla>
+            </stakeholder>
+            
+            
+        </external_stakeholders>
+        
+        <communication_protocols>
+            <protocol name="nombre_protocolo">
+                <frequency>Weekly</frequency>
+                
+                
+                <participants>Roles que participan</participants>
+                
+                <format>Meeting</format>
+                
+                
+                <sla>24 horas</sla>
+                
+                
+                <escalation>
+                    Cuándo y cómo escalar si el protocolo no funciona
+                </escalation>
+            </protocol>
+            
+            
+        </communication_protocols>
+        
+        <integration_points>
+            <agent_integration>
+                <agent_reference>codename-de-otro-agente</agent_reference>
+                
+                <relationship>successor</relationship>
+                
+                
+                <data_exchange>
+                    <data_type>Tipo de datos intercambiados</data_type>
+                    <format>Formato de intercambio (JSON, XML, etc)</format>
+                    <frequency>Frecuencia de intercambio</frequency>
+                </data_exchange>
+                
+                <trigger_conditions>
+                    <condition>Condición que activa la integración</condition>
+                    <condition>Otra condición de trigger</condition>
+                </trigger_conditions>
+                
+                <failure_handling>
+                    Qué hacer si la integración falla:
+                    - Retry logic
+                    - Fallback mechanism
+                    - Alerting
+                </failure_handling>
+            </agent_integration>
+            
+            
+        </integration_points>
+    </collaboration_framework>
+    
+    
+    
+    
+    
+    
+    <deliverables>
+        <deliverable type="document">
+            
+            
+            <name>Nombre del Entregable</name>
+            
+            <description>
+                Descripción detallada de qué es este entregable,
+                qué contiene, y cuál es su propósito.
+            </description>
+            
+            <format>PDF</format>
+            
+            
+            <quality_criteria>
+                <criterion priority="must">
+                    Criterio de calidad que DEBE cumplirse
+                </criterion>
+                <criterion priority="should">
+                    Criterio que DEBERÍA cumplirse
+                </criterion>
+                <criterion priority="could">
+                    Criterio nice-to-have
+                </criterion>
+                
+            </quality_criteria>
+            
+            <template_reference>
+                <location>templates/nombre-template.xml</location>
+                <version>1.0</version>
+                
+            </template_reference>
+            
+            <approval_required>
+                <approver>Rol que debe aprobar</approver>
+                <sla>24 horas</sla>
+                
+            </approval_required>
+            
+            <distribution>
+                <recipient>A quién se entrega</recipient>
+                <method>Método de distribución (Email, Portal, API, etc)</method>
+            </distribution>
+            
+            <retention>
+                <duration>Tiempo de retención (ej: 7 años)</duration>
+                <archive_location>Dónde se archiva</archive_location>
+            </retention>
+        </deliverable>
+        
+        
+        <deliverable type="data">
+            <name>Otro Entregable</name>
+            <description>...</description>
+            
+        </deliverable>
+    </deliverables>
+    
+    
+    
+    
+    
+    
+    <quality_assurance>
+        <pre_execution_checklist>
+            <check category="requirements" priority="critical">
+                
+                
+                
+                <question>¿Pregunta de validación previa clara?</question>
+                
+                <expected_answer>
+                    Respuesta esperada que indica que se puede proceder
+                </expected_answer>
+                
+                <failure_action>
+                    Qué hacer si la respuesta no es la esperada:
+                    - Bloquear ejecución
+                    - Solicitar información
+                    - Escalar a responsable
+                </failure_action>
+            </check>
+            
+            
+            <check category="resources" priority="high">
+                <question>¿Otra pregunta de validación?</question>
+                <expected_answer>...</expected_answer>
+                <failure_action>...</failure_action>
+            </check>
+        </pre_execution_checklist>
+        
+        <during_execution_validation>
+            <validation type="automated" frequency="continuous">
+                
+                
+                
+                <description>Qué se valida continuamente</description>
+                
+                <method>Cómo se realiza la validación (herramienta, proceso)</method>
+                
+                <threshold>Umbral o criterio aceptable</threshold>
+                
+                <alert_conditions>
+                    Condiciones que disparan alertas:
+                    - Condición 1
+                    - Condición 2
+                </alert_conditions>
+            </validation>
+            
+            
+            <validation type="manual" frequency="weekly">
+                <description>Validación manual periódica</description>
+                <method>...</method>
+                <threshold>...</threshold>
+            </validation>
+        </during_execution_validation>
+        
+        <post_execution_checklist>
+            <check category="completeness" priority="critical">
+                <question>¿Pregunta de validación post-ejecución?</question>
+                
+                <expected_answer>Respuesta que indica éxito</expected_answer>
+                
+                <evidence_required>
+                    Evidencia necesaria para validar:
+                    - Documento X
+                    - Métrica Y
+                    - Approval Z
+                </evidence_required>
+            </check>
+            
+            
+        </post_execution_checklist>
+        
+        <success_criteria>
+            <criterion type="quantitative" threshold="80">
+                
+                
+                <name>Nombre del Criterio de Éxito</name>
+                
+                <measurement>Cómo se mide este criterio</measurement>
+                
+                <target>≥ 80%</target>
+                
+                
+                <baseline>65%</baseline>
+                
+            </criterion>
+            
+            <criterion type="qualitative">
+                <name>Criterio Cualitativo</name>
+                <measurement>Método de evaluación cualitativa</measurement>
+                <target>Rating A o superior</target>
+            </criterion>
+            
+            
+        </success_criteria>
+        
+        <validation_tools>
+            <tool>
+                <name>Nombre de Herramienta de Validación</name>
+                <purpose>Para qué se usa en validación</purpose>
+                <automation_level>Fully-automated</automation_level>
+                
+            </tool>
+            
+            
+        </validation_tools>
+        
+        <failure_procedures>
+            <procedure severity="critical">
+                
+                
+                <description>Qué tipo de falla es esta</description>
+                
+                <responsible>Quién es responsable de responder</responsible>
+                
+                <timeline>
+                    Timeline de respuesta:
+                    - Detección: Inmediata (automated)
+                    - Respuesta inicial: 15 minutos
+                    - Resolución: 2 horas
+                </timeline>
+                
+                <escalation>
+                    Cuándo y a quién escalar:
+                    - 15 min: Nivel 1
+                    - 1 hora: Nivel 2
+                    - 2 horas: Executive
+                </escalation>
+            </procedure>
+            
+            
+        </failure_procedures>
+    </quality_assurance>
+    
+    
+    
+    
+    
+    
+    <continuous_improvement>
+        <feedback_loops>
+            <loop>
+                <source>Fuente de feedback (usuarios, métricas, stakeholders)</source>
+                
+                <collection_method>
+                    Cómo se recolecta el feedback (surveys, analytics, meetings)
+                </collection_method>
+                
+                <frequency>Frecuencia de recolección</frequency>
+                
+                <responsible>Rol responsable de analizar feedback</responsible>
+                
+                <action>
+                    Acción que se toma con el feedback recibido:
+                    - Analizar trends
+                    - Identificar mejoras
+                    - Implementar cambios
+                    - Comunicar resultados
+                </action>
+            </loop>
+            
+            
+        </feedback_loops>
+        
+        <improvement_cycles>
+            <cycle name="nombre_ciclo">
+                <frequency>Weekly</frequency>
+                
+                
+                <trigger>Evento que inicia este ciclo</trigger>
+                
+                <activities>
+                    <activity>
+                        <description>Actividad de mejora específica</description>
+                        <responsible>Rol responsable</responsible>
+                        <output>Output esperado de la actividad</output>
+                    </activity>
+                    
+                    
+                </activities>
+                
+                <metrics>
+                    <metric>Métrica para medir mejora en este ciclo</metric>
+                    <metric>Otra métrica relevante</metric>
+                </metrics>
+            </cycle>
+            
+            
+        </improvement_cycles>
+        
+        <knowledge_base_management>
+            <practice>
+                <description>Práctica de gestión de conocimiento</description>
+                <frequency>Frecuencia de actualización</frequency>
+                <responsible>Rol responsable</responsible>
+            </practice>
+            
+            
+        </knowledge_base_management>
+        
+        <metrics_tracking>
+            <metric>
+                <name>Nombre de la Métrica a Trackear</name>
+                <collection_frequency>Continua</collection_frequency>
+                <analysis_frequency>Semanal</analysis_frequency>
+                <action_threshold>
+                    Umbral que dispara acción (ej: si baja de 80%)
+                </action_threshold>
+            </metric>
+            
+            
+        </metrics_tracking>
+        
+        <learning_mechanisms>
+            <mechanism type="automated">
+                
+                
+                <description>Descripción del mecanismo de aprendizaje</description>
+                
+                <data_source>De dónde obtiene data para aprender</data_source>
+                
+                <update_frequency>
+                    Frecuencia de actualización del knowledge
+                </update_frequency>
+            </mechanism>
+            
+            
+        </learning_mechanisms>
+        
+        
+        
+        
+        
+        <maturity_model>
+            <description>
+                Modelo de madurez para adopción y evolución del agente en la organización.
+                Permite tracking de progreso y roadmap de mejora.
+            </description>
+            
+            <levels>
+                <level number="1" name="Inicial">
+                    <description>Uso ad-hoc, sin estandarización</description>
+                    
+                    <characteristics>
+                        <characteristic>Sin procesos definidos</characteristic>
+                        <characteristic>Resultados impredecibles</characteristic>
+                        <characteristic>Dependencia de individuos</characteristic>
+                    </characteristics>
+                    
+                    <next_level_requirements>
+                        <requirement>Definir procesos básicos</requirement>
+                        <requirement>Documentar workflows iniciales</requirement>
+                        <requirement>Training básico de usuarios</requirement>
+                    </next_level_requirements>
+                </level>
+                
+                <level number="2" name="Gestionado">
+                    <description>Procesos básicos establecidos y seguidos</description>
+                    
+                    <characteristics>
+                        <characteristic>Procesos documentados</characteristic>
+                        <characteristic>Tracking básico de métricas</characteristic>
+                        <characteristic>Repetibilidad de resultados</characteristic>
+                    </characteristics>
+                    
+                    <next_level_requirements>
+                        <requirement>Estandarizar procesos across teams</requirement>
+                        <requirement>Implementar métricas consistentes</requirement>
+                        <requirement>Crear knowledge base</requirement>
+                    </next_level_requirements>
+                </level>
+                
+                <level number="3" name="Definido">
+                    <description>Procesos estandarizados y optimizados</description>
+                    
+                    <characteristics>
+                        <characteristic>Procesos estandarizados organizacionalmente</characteristic>
+                        <characteristic>Métricas definidas y trackeadas</characteristic>
+                        <characteristic>Knowledge base activo</characteristic>
+                    </characteristics>
+                    
+                    <next_level_requirements>
+                        <requirement>Implementar control estadístico</requirement>
+                        <requirement>Predictive analytics</requirement>
+                    </next_level_requirements>
+                </level>
+                
+                <level number="4" name="Cuantitativamente Gestionado">
+                    <description>Gestión basada en métricas y control estadístico</description>
+                    
+                    <characteristics>
+                        <characteristic>Decisiones data-driven</characteristic>
+                        <characteristic>Control estadístico de procesos</characteristic>
+                        <characteristic>Predictive capabilities</characteristic>
+                    </characteristics>
+                    
+                    <next_level_requirements>
+                        <requirement>Implementar mejora continua sistemática</requirement>
+                        <requirement>Innovation en procesos</requirement>
+                    </next_level_requirements>
+                </level>
+                
+                <level number="5" name="Optimizado">
+                    <description>Mejora continua sistemática y proactiva</description>
+                    
+                    <characteristics>
+                        <characteristic>Mejora continua institucionalizada</characteristic>
+                        <characteristic>Innovation constante</characteristic>
+                        <characteristic>Industry-leading practices</characteristic>
+                    </characteristics>
+                </level>
+            </levels>
+            
+            <assessment>
+                <frequency>Trimestral o Anual</frequency>
+                <responsible>Rol responsable de realizar el assessment</responsible>
+                <methodology>
+                    Metodología para evaluar nivel actual:
+                    - Survey a stakeholders
+                    - Análisis de métricas
+                    - Review de procesos
+                    - Benchmarking
+                </methodology>
+            </assessment>
+        </maturity_model>
+    </continuous_improvement>
+    
+    
+    
+    
+    
+    
+    <templates>
+        <template type="document" name="nombre_template">
+            
+            
+            <description>Descripción del template y cuándo usarlo</description>
+            
+            <structure>
+                Estructura del template con placeholders:
+                
+                # [Título del Documento]
+                
+                ## Sección 1
+                - Item {variable1}
+                - Item {variable2}
+                
+                ## Sección 2
+                ...
+            </structure>
+            
+            <variables>
+                <variable name="variable1">
+                    Descripción de la variable y cómo usarla
+                </variable>
+                <variable name="variable2">
+                    Otra variable del template
+                </variable>
+                
+            </variables>
+            
+            <example>
+                Ejemplo concreto de uso del template con valores reales
+            </example>
+            
+            <format>Markdown</format>
+            
+        </template>
+        
+        
+    </templates>
+    
+    
+    
+    
+    
+    
+    <usage_examples>
+        <example name="caso_de_uso_descriptivo">
+            <context>
+                Contexto organizacional o situacional del ejemplo
+            </context>
+            
+            <scenario>
+                Descripción detallada del escenario específico
+            </scenario>
+            
+            <input>
+                Input concreto que recibe el agente:
+                - Dato 1
+                - Dato 2
+                - Documento X
+            </input>
+            
+            <process>
+                Proceso paso a paso que sigue el agente:
+                
+                1. Paso 1: Analiza input X
+                2. Paso 2: Consulta knowledge base Y
+                3. Paso 3: Aplica modelo Z
+                4. Paso 4: Genera output
+                5. Paso 5: Valida con stakeholder
+            </process>
+            
+            <output>
+                Output generado en este ejemplo:
+                - Documento completado
+                - Decisión tomada
+                - Métricas calculadas
+            </output>
+            
+            <learnings>
+                Aprendizajes clave de este caso:
+                - Learning 1
+                - Learning 2
+                - Best practice identificada
+            </learnings>
+            
+            <metrics_achieved>
+                Métricas logradas en este caso específico:
+                - Métrica 1: Resultado obtenido
+                - Métrica 2: Resultado vs target
+            </metrics_achieved>
+        </example>
+        
+        
+        <example name="otro_caso_de_uso">
+            <context>...</context>
+            <scenario>...</scenario>
+            
+        </example>
+    </usage_examples>
+    
+    
+    
+    
+    
+    
+    <documentation>
+        <getting_started>
+            <step number="1">
+                <title>Título del Paso Inicial</title>
+                
+                <description>
+                    Descripción detallada y clara del primer paso para usar el agente.
+                    Incluir comandos específicos, screenshots, o links si es necesario.
+                </description>
+                
+                <estimated_time>15-30 minutos</estimated_time>
+                
+                <prerequisites>
+                    <prerequisite>Prerequisito necesario antes de este paso</prerequisite>
+                    <prerequisite>Otro prerequisito</prerequisite>
+                </prerequisites>
+                
+                <troubleshooting>
+                    Si encuentras problema X, hacer Y
+                </troubleshooting>
+            </step>
+            
+            <step number="2">
+                <title>Segundo Paso</title>
+                <description>...</description>
+                <estimated_time>...</estimated_time>
+            </step>
+            
+            
+        </getting_started>
+        
+        <best_practices>
+            <practice category="efficiency">
+                
+                
+                <title>Título de la Best Practice</title>
+                
+                <description>
+                    Descripción de la práctica recomendada
+                </description>
+                
+                <example>
+                    Ejemplo concreto de cómo aplicar esta práctica
+                </example>
+                
+                <benefits>
+                    Beneficios de aplicar esta best practice:
+                    - Beneficio 1
+                    - Beneficio 2
+                </benefits>
+            </practice>
+            
+            
+        </best_practices>
+        
+        <troubleshooting>
+            <issue category="technical">
+                
+                
+                <problem>Descripción clara del problema</problem>
+                
+                <symptoms>
+                    Síntomas observables del problema:
+                    - Síntoma 1
+                    - Síntoma 2
+                </symptoms>
+                
+                <diagnosis>
+                    Cómo diagnosticar la causa:
+                    1. Check X
+                    2. Verify Y
+                    3. Test Z
+                </diagnosis>
+                
+                <solution>
+                    Solución paso a paso:
+                    1. Paso 1
+                    2. Paso 2
+                    3. Verificar resolución
+                </solution>
+                
+                <prevention>
+                    Cómo prevenir este problema en el futuro:
+                    - Medida preventiva 1
+                    - Medida preventiva 2
+                </prevention>
+            </issue>
+            
+            
+        </troubleshooting>
+        
+        <faq>
+            <item>
+                <question>Pregunta frecuente 1</question>
+                <answer>
+                    Respuesta detallada a la pregunta
+                </answer>
+                <related_sections>
+                    Referencias a secciones relevantes de la spec
+                </related_sections>
+            </item>
+            
+            <item>
+                <question>Pregunta frecuente 2</question>
+                <answer>...</answer>
+                <related_sections>...</related_sections>
+            </item>
+            
+            
+        </faq>
+    </documentation>
+    
+    
+    
+    
+    
+    
+    <version_history>
+        <version number="1.0.0" date="2025-10-14" status="production">
+            
+            
+            <changes>
+                <change type="feature">
+                    Versión inicial del agente
+                </change>
+                <change type="feature">
+                    Feature principal implementada
+                </change>
+                
+            </changes>
+            
+            <migration_notes>
+                Notas de migración si aplica (vacío para versión inicial)
+            </migration_notes>
+            
+            <breaking_changes>
+                Lista de breaking changes si aplica (vacío para versión inicial)
+            </breaking_changes>
+        </version>
+        
+        
+        
+    </version_history>
+    
+    
+    
+    
+    
+    
+    <mission_statement>
+        <mission>
+            Declaración clara y concisa de la misión del agente.
+            ¿Qué busca lograr? ¿Cuál es su propósito fundamental?
+            
+            Debe ser inspiradora pero específica, típicamente 2-3 oraciones.
+        </mission>
+        
+        <vision>
+            Visión a largo plazo del impacto del agente.
+            ¿Cómo se ve el éxito en 2-3 años?
+            ¿Qué cambio quiere generar en la organización o industria?
+        </vision>
+        
+        <success_definition>
+            Cómo se define el éxito del agente - métricas clave:
+            - Métrica 1 alcanzando target X
+            - Métrica 2 superando baseline Y
+            - Satisfacción de stakeholders &gt; Z
+            - Adoption rate &gt; W%
+        </success_definition>
+        
+        <value_proposition>
+            Propuesta de valor única que el agente aporta.
+            ¿Qué hace mejor que alternativas?
+            ¿Por qué usar este agente sobre otros approaches?
+        </value_proposition>
+    </mission_statement>
+    
+    
+    
+    
+    
+    
+    <implementation_plan>
+        <phase name="diagnosis" order="1">
+            <duration>2-3 semanas</duration>
+            
+            <objectives>
+                <objective>Evaluar estado actual y readiness organizacional</objective>
+                <objective>Identificar stakeholders y champions</objective>
+                <objective>Definir scope inicial y constraints</objective>
+            </objectives>
+            
+            <activities>
+                <activity>
+                    <description>Assessment de estado actual</description>
+                    <responsible>Implementation Lead</responsible>
+                    <dependencies>Acceso a stakeholders</dependencies>
+                </activity>
+                
+                <activity>
+                    <description>Identificar quick wins</description>
+                    <responsible>Implementation Team</responsible>
+                    <dependencies>Diagnosis completo</dependencies>
+                </activity>
+            </activities>
+            
+            <deliverables>
+                <deliverable>Assessment report</deliverable>
+                <deliverable>Implementation roadmap inicial</deliverable>
+            </deliverables>
+            
+            <success_criteria>
+                <criterion>Stakeholders identificados y comprometidos</criterion>
+                <criterion>Quick wins identificados</criterion>
+                <criterion>Budget aprobado</criterion>
+            </success_criteria>
+            
+            <risks>
+                <risk severity="high">
+                    <description>Resistencia organizacional</description>
+                    <mitigation>Executive sponsorship, communication plan</mitigation>
+                </risk>
+                
+                <risk severity="medium">
+                    <description>Technical readiness gaps</description>
+                    <mitigation>Training y tooling investment</mitigation>
+                </risk>
+            </risks>
+        </phase>
+        
+        <phase name="pilot" order="2">
+            <duration>4-8 semanas</duration>
+            <objectives>
+                <objective>Validar agente con grupo piloto</objective>
+                <objective>Identificar issues antes de full rollout</objective>
+            </objectives>
+            
+        </phase>
+        
+        <phase name="rollout" order="3">
+            <duration>8-12 semanas</duration>
+            <objectives>
+                <objective>Deploy agente a toda la organización</objective>
+            </objectives>
+            
+        </phase>
+        
+        <rollout_strategy>
+            <approach>Phased</approach>
+            
+            
+            <pilot_criteria>
+                Criterios para seleccionar piloto:
+                - Team con alto engagement
+                - Use case bien definido
+                - Manageable scope
+                - Champions disponibles
+            </pilot_criteria>
+            
+            <success_metrics>
+                Métricas para evaluar éxito del rollout:
+                - Adoption rate &gt; 70% en 3 meses
+                - User satisfaction &gt; 4/5
+                - Zero critical incidents
+                - ROI positivo en 6 meses
+            </success_metrics>
+        </rollout_strategy>
+    </implementation_plan>
+    
+    
+    
+    
+    
+    
+    <training_requirements>
+        <audience name="power_users">
+            <role_description>
+                Usuarios avanzados que usarán el agente intensivamente
+            </role_description>
+            
+            <training_objectives>
+                <objective>Dominar todas las funcionalidades del agente</objective>
+                <objective>Troubleshooting básico</objective>
+                <objective>Ser punto de contacto para otros usuarios</objective>
+            </training_objectives>
+            
+            <training_content>
+                <module name="introduction">
+                    <description>Introducción y overview del agente</description>
+                    <duration>1 hora</duration>
+                    <format>Presencial</format>
+                    
+                    
+                    <materials>
+                        <material>Slide deck</material>
+                        <material>Demo environment</material>
+                        <material>Quick reference guide</material>
+                    </materials>
+                </module>
+                
+                <module name="hands_on">
+                    <description>Ejercicios prácticos</description>
+                    <duration>2 horas</duration>
+                    <format>Presencial</format>
+                    <materials>
+                        <material>Exercise workbook</material>
+                        <material>Sandbox environment</material>
+                    </materials>
+                </module>
+                
+                
+            </training_content>
+            
+            <assessment>
+                <method>Practical exam - completar ejercicios reales</method>
+                <passing_criteria>80% de ejercicios completados correctamente</passing_criteria>
+            </assessment>
+            
+            <follow_up>
+                <support>Office hours semanales primeros 2 meses</support>
+                <refresher_frequency>Anual</refresher_frequency>
+            </follow_up>
+        </audience>
+        
+        <audience name="casual_users">
+            <role_description>Usuarios ocasionales</role_description>
+            <training_objectives>
+                <objective>Uso básico para casos comunes</objective>
+            </training_objectives>
+            <training_content>
+                <module name="quick_start">
+                    <description>Quick start de 30 minutos</description>
+                    <duration>30 minutos</duration>
+                    <format>Self-paced</format>
+                    <materials>
+                        <material>Video tutorial</material>
+                        <material>Written guide</material>
+                    </materials>
+                </module>
+            </training_content>
+            
+        </audience>
+        
+        
+        
+        <change_management>
+            <communication_plan>
+                Plan de comunicación del cambio organizacional:
+                - Pre-launch: Awareness campaign
+                - Launch: Kickoff events
+                - Post-launch: Success stories sharing
+            </communication_plan>
+            
+            <resistance_management>
+                Estrategias para manejar resistencia al cambio:
+                - Identify resisters early
+                - Address concerns proactively
+                - Show quick wins
+                - Executive support visible
+            </resistance_management>
+            
+            <success_factors>
+                Factores críticos de éxito para adopción:
+                - Executive sponsorship activo
+                - Champions en cada equipo
+                - Training de calidad
+                - Support accesible
+                - Quick wins visibles
+            </success_factors>
+        </change_management>
+    </training_requirements>
+    
+    
+    
+    
+    
+    
+    
+    <data_architecture>
+        <data_models>
+            <model name="nombre_entidad" type="logical">
+                
+                
+                <description>Descripción del modelo de datos</description>
+                
+                <entities>
+                    <entity name="NombreEntidad">
+                        <description>Descripción de la entidad</description>
+                        
+                        <attributes>
+                            <attribute name="id" type="UUID">
+                                <description>Primary key</description>
+                                <constraints>PK, NOT NULL</constraints>
+                                <default_value>gen_random_uuid()</default_value>
+                            </attribute>
+                            
+                            <attribute name="nombre" type="VARCHAR(255)">
+                                <description>Nombre descriptivo</description>
+                                <constraints>NOT NULL</constraints>
+                            </attribute>
+                            
+                            <attribute name="created_at" type="TIMESTAMP">
+                                <description>Timestamp de creación</description>
+                                <constraints>NOT NULL</constraints>
+                                <default_value>NOW()</default_value>
+                            </attribute>
+                            
+                            
+                        </attributes>
+                        
+                        <relationships>
+                            <relationship type="one-to-many">
+                                <target_entity>OtraEntidad</target_entity>
+                                <description>Descripción de la relación</description>
+                                <foreign_key>entidad_id</foreign_key>
+                            </relationship>
+                            
+                            
+                        </relationships>
+                        
+                        <indexes>
+                            <index name="idx_nombre" columns="nombre" unique="false"/>
+                            <index name="idx_created_at" columns="created_at" unique="false"/>
+                            
+                        </indexes>
+                    </entity>
+                    
+                    
+                </entities>
+            </model>
+            
+            
+        </data_models>
+        
+        <database_requirements>
+            <engine>PostgreSQL</engine>
+            
+            
+            <version>14+</version>
+            <minimum_version>14.0</minimum_version>
+            
+            <acid_compliance>
+                <requirement>Atomicity: Transactions must be atomic</requirement>
+                <requirement>Consistency: Constraints must be enforced</requirement>
+                <requirement>Isolation: SERIALIZABLE isolation level</requirement>
+                <requirement>Durability: WAL enabled</requirement>
+            </acid_compliance>
+            
+            <normalization_level>3NF</normalization_level>
+            
+            
+            <extensions_required>
+                <extension>uuid-ossp</extension>
+                <extension>pg_trgm</extension>
+                
+            </extensions_required>
+        </database_requirements>
+        
+        <data_governance>
+            <data_dictionary>
+                <table name="nombre_tabla">
+                    <description>Descripción de la tabla y su propósito</description>
+                    <owner>Data owner responsible (rol)</owner>
+                    <sensitivity>High</sensitivity>
+                    
+                    <retention_policy>7 años por compliance</retention_policy>
+                </table>
+                
+                
+            </data_dictionary>
+            
+            <backup_recovery>
+                <backup_frequency>Daily full + hourly incremental</backup_frequency>
+                <retention>30 días online, 1 año archived</retention>
+                <recovery_rto>4 horas</recovery_rto>
+                
+                <recovery_rpo>1 hora</recovery_rpo>
+                
+                <testing_frequency>Quarterly</testing_frequency>
+            </backup_recovery>
+            
+            <migration_strategy>
+                <versioning>Sequential numbered migrations (001, 002, etc)</versioning>
+                <tool>Flyway / Liquibase / Alembic</tool>
+                <rollback_procedure>
+                    Procedimiento de rollback:
+                    1. Stop application
+                    2. Restore from backup
+                    3. Apply rollback migration si existe
+                    4. Verify data integrity
+                    5. Restart application
+                </rollback_procedure>
+            </migration_strategy>
+            
+            <data_quality>
+                <validation_rules>
+                    <rule>Regla de validación de calidad de datos</rule>
+                    <rule>Otra regla de quality</rule>
+                </validation_rules>
+                
+                <monitoring>
+                    Monitoring de data quality:
+                    - Null rate checks
+                    - Duplicate detection
+                    - Referential integrity checks
+                    - Data freshness monitoring
+                </monitoring>
+            </data_quality>
+        </data_governance>
+    </data_architecture>
+    
+    
+    
+    
+    
+    <resources>
+        <documentation_links>
+            <link type="official_docs">URL a documentación oficial</link>
+            <link type="tutorial">URL a tutorials relevantes</link>
+            <link type="api_reference">URL a API references</link>
+        </documentation_links>
+        
+        <community_resources>
+            <resource>Forums, Discord, Slack channels relevantes</resource>
+            <resource>Stack Overflow tags</resource>
+            <resource>GitHub repositories de referencia</resource>
+        </community_resources>
+        
+        <learning_resources>
+            <resource>Cursos recomendados</resource>
+            <resource>Libros de referencia</resource>
+            <resource>Certifications relevantes</resource>
+        </learning_resources>
+    </resources>
+    
+    <anti_patterns>
+        <anti_pattern name="nombre_anti_pattern" severity="critical">
+            
+            
+            <description>Descripción de este anti-pattern</description>
+            
+            <symptoms>
+                Síntomas que indican presencia del anti-pattern:
+                - Síntoma 1
+                - Síntoma 2
+            </symptoms>
+            
+            <why_bad>
+                Por qué este patrón es problemático:
+                - Razón 1
+                - Razón 2
+                - Consecuencias negativas
+            </why_bad>
+            
+            <solution>
+                Cómo corregir este anti-pattern:
+                1. Paso 1
+                2. Paso 2
+                3. Validar corrección
+            </solution>
+            
+            <detection>
+                Cómo detectar este anti-pattern:
+                - Herramienta automatizada
+                - Code review checklist
+                - Metrics que indican presencia
+            </detection>
+            
+            <example type="bad">
+                Ejemplo concreto del anti-pattern (código, proceso, etc)
+            </example>
+            
+            <example type="good">
+                Ejemplo de la forma correcta (solución)
+            </example>
+        </anti_pattern>
+        
+        
+    </anti_patterns>
+    
+    
+    
+    
+    
+    <document_metadata>
+        <schema_version>DEVELOP-Standard v3.0.0</schema_version>
+        <template_version>3.0.0</template_version>
+        <last_template_update>2025-10-14</last_template_update>
+        
+        <validation>
+            <xml_valid>true</xml_valid>
+            <schema_compliant>true</schema_compliant>
+            <completeness_score>MVP | Standard | Professional | Enterprise</completeness_score>
+        </validation>
+        
+        <credits>
+            <innovation_source>PMO innovations (pmo-assistant-unificado v1.0.0)</innovation_source>
+            <maintained_by>Architecture Team TODO Academy</maintained_by>
+        </credits>
+    </document_metadata>
+    
+</agent_specification>
